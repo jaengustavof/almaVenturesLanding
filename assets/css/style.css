@@ -1,0 +1,6987 @@
+/* FUENTES PERSONALIZADAS */
+@font-face {
+    font-family: 'Passion One'; /*nombre de tipografia entre comillas*/
+    font-display: auto;
+    src: url('../rsc/fonts/PassionOne-Regular.ttf') format('truetype'); /*.otf >> format:'opentype' | .ttf >> format: 'truetype'*/
+
+}
+
+@font-face {
+    font-family: 'Crimson Text'; /*nombre de tipografia entre comillas*/
+    font-display: auto;
+    src: url('../rsc/fonts/CrimsonText-Regular.ttf') format('truetype'); /*.otf >> format:'opentype' | .ttf >> format: 'truetype'*/
+
+}
+
+/* VARIABLES */
+
+:root {}
+
+/* CSS COMUN */
+
+*{
+    
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    transition: 5s;
+}
+
+h1 {
+    font-size: 65px;
+    font-size: 65px;
+    text-align: left;
+    line-height: 75px;
+    font-family: 'Passion One', sans-serif;
+    color: #333333;
+}
+
+h2 { 
+    font-size: 60px;
+    text-align: left;
+    line-height: 65px;
+    font-weight: 400;
+    font-family: 'Passion One', sans-serif;
+
+ }
+
+
+ h3 { 
+    font-size: 40px;
+    text-align: left;
+    line-height: 50px;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Passion One', sans-serif;
+    
+ }
+
+ h4, h5, h6 {
+    color: #333333;
+ }
+
+
+/*Home Page*/
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/***Menu Mobile***/
+
+
+.mobileMenuContainer {
+    width: 100%;
+    height: 200px;
+
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: fixed;
+    top: 0px;
+    z-index: 999999998;
+    transition: 0.5s;
+    
+}
+
+.mobileLogoContainer {
+    width: 160px;
+    height:72px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /*background-image: url('');
+    background-size: contain;*/ 
+}
+
+#imagenMobileLogo{
+    width: 75%;
+}
+
+.mobileBurgerContainer {
+    height: 100%;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.fa-bars, .fa-times-circle {
+    font-size: 50px;
+    color: white;
+}
+
+#menuMobile{
+    /*Estas dos lineas lo hacen vertical*/
+    width: 66%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 999999999;
+    top: 0px;
+    right: 0px;
+
+    /* trasnform cambia el sentido de horizonal a vertical*/
+    transform: translate(100%, 0%);
+
+    transition: 0.5s;/*tiempo en el que se realiza el cambio*/
+    display: none;
+    align-items: center;
+}
+
+#menuMobile div{
+    position: absolute;
+    top: 0px;
+    left: 131px;
+    transform: translate(-200%, 100%);
+    font-family: 'Passion One', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+#menuMobile ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    /* flex-direction lo presenta en columna*/
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#menuMobile ul li{
+    padding: 10%;
+}
+
+#menuMobile a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
+}
+/***Fin Menu Mobile***/
+
+/***Menu***/
+.contenedorMenu {
+    width: 100%;
+    height: 188px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    height: 100%;
+    width: 1430px;
+    
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+
+    font-family: 'Crimson Text', serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.menuLogo{
+    width: 317px;
+    height: 97px;
+
+    display: flex;
+    align-items: center;
+}
+
+.menuLogo img {
+    width: 80%;
+}
+
+.menuLinks {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menuLinks a {
+    margin-left: 35px;
+}
+.buscador {
+    height: 100%;
+    width: 150px;
+
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.activeNavBar {
+    padding: 2px 20px; 
+    background: #FF1D3A;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.fa-search {
+    color: #333333;
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+
+#navbar {
+  background-color:rgba(255,255,255,0.9);
+  position: fixed;
+  top: -188px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 999999;
+  transition: 0.5s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.activeMenu{
+    width: 119px;
+    height: 31px;
+    background: #FF1D3A;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white!important;
+
+}
+
+.activeMenu:hover{
+    background: white;
+    border-radius: 7px;
+    border: 1px solid #FF1D3A;  
+    color: #FF1D3A;
+    transition: 0.5s;
+}
+
+
+/***Menu***/
+
+
+/***carrousel***/
+
+.carrousel {
+    width: 100%;
+    height: 732px;
+    margin-bottom: 50px;
+
+}
+
+.contenedorCarr {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    padding: 0 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.gallery-top, .gallery-thumbs {
+    background:black;
+}
+
+/***SWIPER**/
+
+    
+    .swiper-container {
+      width: 100%;
+      height: 732px;
+      margin: 10px!important;
+      border: 9px solid black;
+      border-radius: 7px;
+
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+    }
+
+   .swiper-slide h2 {
+        color: white;
+    }
+    .swiper-slide h2, .swiper-slide img  {
+        margin-left: 150px;
+    }
+
+    .gallery-top {
+      height: 100%;
+      width: 70%
+    }
+
+    .gallery-thumbs {
+      height: 100%;
+       width: 30%
+      
+     
+    }
+
+    .gallery-thumbs .swiper-slide {
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-button-next {
+        color: transparent!important;
+        width: 100%!important;
+        height: 100%!important;
+        background: transparent;
+        top: 2%!important;
+    }
+
+    .uno {
+
+        background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/swiperImg1.jpg);
+        background-size: cover;
+
+    }
+
+    .dos {
+
+        background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/swiperImg2.jpg);
+        background-size: cover;
+
+    }
+
+    .tres {
+
+        background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../rsc/img/swiperImg3.jpg);
+        background-size: cover;
+
+    }
+
+    .cuatro {
+
+        background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/swiperImg4.jpg);
+        background-size: cover;
+
+    }
+
+
+
+
+/***Fin carrousel***/
+
+
+
+/*******Innovate*******/
+
+
+.innovate {
+    width: 100%;
+    height: 910px;
+    margin-bottom: 40px
+}
+
+.innovateTitle {
+    width: 100%;
+    height: 180px;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innovateContent {
+    width: 100%;
+    height: 740px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.innovateContentContainer {
+    width: 1118px;
+    height: 760px;
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interactiveLogo {
+    width: 558px;
+    height: 742px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/*Tapa los agujeros entre los cubos.*/
+
+.fondoLogo {
+    background: #39383A;
+    width: 270px;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    left: 30%;
+}
+
+.whiteCube {
+    background: white;
+    width: 33.33%;
+    height: 25%;
+    border-radius: 7px;
+    
+}
+
+                        /*Cubes Borders*/
+.topLeft {
+    border-top: 6px solid #39383A;
+    border-left: 6px solid #39383A;
+    border-right: 3px solid #39383A;
+    border-bottom: 3px solid #39383A;
+    
+    
+}
+
+.topCenter{
+    border-top: 6px solid #39383A;
+    border-left: 3px solid #39383A;
+    border-right: 3px solid #39383A;
+    border-bottom: 3px solid #39383A;   
+
+}
+
+.topRight{
+    border-top: 6px solid #39383A;
+    border-left: 3px solid #39383A;
+    border-right: 6px solid #39383A;
+    border-bottom: 3px solid #39383A;   
+}
+
+.midLeft {
+    border-top: 3px solid #39383A;
+    border-left: 6px solid #39383A;
+    border-right: 3px solid #39383A;
+    border-bottom: 3px solid #39383A;   
+}
+
+.midCenter {
+    border-top: 3px solid #39383A;
+    border-left: 3px solid #39383A;
+    border-right: 3px solid #39383A;
+    border-bottom: 3px solid #39383A;
+}
+
+.midRight {
+    border-top: 3px solid #39383A;
+    border-left: 3px solid #39383A;
+    border-right: 6px solid #39383A;
+    border-bottom: 3px solid #39383A;   
+}
+
+.bottomLeft {
+    border-top: 3px solid #39383A;
+    border-left: 6px solid #39383A;
+    border-right: 3px solid #39383A;
+    border-bottom: 6px solid #39383A;   
+}
+
+.bottomCenter {
+    border-top: 3px solid #39383A;
+    border-left: 3px solid #39383A;
+    border-right: 3px solid #39383A;
+    border-bottom: 6px solid #39383A;   
+}
+
+.bottomRight {
+    border-top: 3px solid #39383A;
+    border-left: 3px solid #39383A;
+    border-right: 6px solid #39383A;
+    border-bottom: 6px solid #39383A;
+}
+
+.cubeContent {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+/*************************************
+*************************************
+**************************************/
+.topLeftContent {
+    background: url('../rsc/img/home1.jpg');
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.topRightContent {
+    background: url('../rsc/img/aShape.png');
+    background-position: center;
+    
+    background-repeat: no-repeat;
+}
+
+.midCenterUno{
+    background: url('../rsc/img/home4.jpg');
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.midRightDos {
+    background: url('../rsc/img/home5.jpg');
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.bottomLeft {
+    background: url('../rsc/img/home6.jpg');
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;   
+}
+
+.almaA {
+    background: url('../rsc/img/A.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.almaL {
+    background: url('../rsc/img/L.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.almaM {
+    background: url('../rsc/img/M.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.cubeAShape {
+    background: url('../rsc/img/aShape.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cubeLShape {
+    background: url('../rsc/img/lShape.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cubeMShape {
+    background: url('../rsc/img/mShape.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/***************************/
+/***************************/
+    /***Flip Cards***/
+
+.innovateCards {
+    width: 460px;
+    height: 742px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardContainer {
+    width: 450px;
+    height: 237px;
+    border-radius: 7px;
+    background: transparent;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box-front, .flip-box-back {
+
+  padding: 0 10px;  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #333333;
+  border-radius: 7px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-box-front h3 {
+    font-family: 'Passion One', cursive;
+    font-weight: normal;
+    text-align: center;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #ededed;
+}
+
+.flip-box-back {
+  background-color: #ededed;
+  border-radius: 7px;
+  color: white;
+  transform: rotateX(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-box-back h4 {
+    font-family: 'Passion One', sans-serif;
+    color: #333333;
+    text-align: center;
+    font-size: 28px;
+    
+    margin: 0;
+}
+
+.flip-box-back p{
+    font-family: 'Crimson Text', serif;
+    font-weight: normal;
+    text-align: center;
+    color: #333333;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+/****** Innovate Mobile ******/
+/****** Innovate Mobile ******/
+
+.innovateMobile {
+    display: none;
+    width: 100%;
+    height: 1020px; 
+}
+
+.innovateMobileTitle {
+    width: 100%;
+    height: 266px;
+}
+
+ .innovateMobileFooter {
+    width: 100%;
+    height: 266px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.innovateMobileTitle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 53px;
+}
+
+.innovateMobileMain {
+    width: 100%;
+    height: 488px;
+    background: grey;
+
+    justify-content: flex-end;
+    align-items: center;
+    display: none;
+}
+
+.mMainone {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/innovateMobile1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mMaintwo {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/innovateMobile3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mMainthree {
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/innovateMobile2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.innovateMobileMain h2 {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.innovateMobileMain p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.innovateMobileMain img{
+    width: 100%;
+    height: 100%;
+}
+
+.innovateMobileMainText {
+    width: 450px;
+    height: 252px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innovateMobileContainer1, .innovateMobileContainer2 {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+.innovateMobileContainer1 {
+    background: #ededed;
+    color: #333333;
+}
+
+.innovateMobileContainer2, .innovateMobileContainer2 h3 {
+    background: #333333;
+    color:  #ededed;
+    
+}
+
+.innovateMobileContainer1 h3, .innovateMobileContainer2 h3 {
+    font-size: 40px;
+    text-align: center;
+
+}
+
+
+
+/*******OUR BRANDS*******/
+
+.saparadorMobile {
+    display: none;
+    width: 90%;
+    height: 4px;
+    background: #333333;
+    margin: auto;
+}
+
+.ourBrandsTitle {
+    width: 100%;
+    height: 180px;
+    background: #EEEEEE;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.ourBrandsTitle h2 {
+    color: #333333;
+}
+
+.ourBrands {
+    width: 100%;
+    height: 2046px; 
+    background: #EEEEEE;
+}
+
+.ourBrandsContent {
+    width: 100%;
+    height: 550px;  
+    background: #EEEEEE;
+}
+
+.brandsOverFlow::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.contentColor {
+    background: #EEEEEE;
+}
+
+.brandContentContainer{
+    width: 80%;
+    height: 550px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentPic {
+    height: 100%;
+    width: 55%;
+    /*background: red;*/
+
+    display: flex;
+    align-items: center;
+}
+
+.brandRight {
+    justify-content: flex-end;
+}
+
+.contentText {
+    height: 100%;
+    width: 45%;
+    /*background: blue;*/
+    display: flex;
+    align-items: center;
+}
+
+.brandPicture {
+    width: 828px;
+    height: 524px;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandPicture img{
+    width: auto;
+}
+
+.brandPic1 {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/ourBrands.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.brandPic2 {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/ourBrands1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.brandPic3 {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/ourBrands2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.textContainer {
+    width: 90%;
+    height: 524px;
+    /*background: teal;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.pLeft {
+    padding-left: 53px; 
+}
+
+.socialLogoContainer {
+    width: 100%;
+    height: 98px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ourBrandsSocialMedia, .ourBrandsLogoContainer {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLogoContainer img{
+    width: 100%;
+}
+
+.ourBrandsSocialMediaIcon {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.ourBrandsSocialMediaIcon {
+    color: #333333;
+    font-size: 32px;
+}
+
+
+.textContainer h3 {
+    font-size: 44px;
+    color: #333333;
+    margin-top: 25px;
+    margin-bottom: 32px;
+}
+
+.textContainer p {
+    color: #5B5B5B;
+    font-family: 'Crimson Text', serif!important;
+    font-weight: normal;
+    font-size: 26px!important;
+}
+
+
+.brandsOverFlow {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+
+.brandsOverFlowMobile {
+    display: none;
+    width: 100%;
+    height: 91%;
+    overflow: auto;
+}
+
+.brandsOverFlowMobile h3 {
+    text-align: center!important;
+}
+
+.brandsOverFlowMobile p {
+    text-align: center!important;
+}
+
+.otherText {
+    margin-top: 60px;
+}
+.otherText p{
+    width: 100%;
+    
+    color: #5B5B5B;
+    font-size: 28px;
+    font-family: 'Passion One', sans-serif;
+    margin: auto;
+}
+
+.separador {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+/**Who We Are**/
+
+.whoWeAre {
+    width: 100%;
+    height: 1016px;
+    background: white;
+}
+
+.whoWeAreTitle {
+    width: 100%;
+    height: 180px;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;;
+}
+
+.whoWeAreContainer {
+    width: 100%;
+    height: 837px;
+    
+}
+
+.whoWeAreLogo {
+    width: 544px;
+    height: 911px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.whoWeAreLogo img {
+    width: 90%;
+    transition: 5s;
+}
+    
+    /**Who We Are Video & Slide**/
+.whoWeAreVideo {
+    width: 1400px;
+    height: 656px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.mySlides, .mySlideShade {
+    display: none;
+    width: 100%;
+    max-width: 1131px;
+    height: 636px;
+    background: grey;
+    border-radius: 7px;
+    
+    margin: auto;
+
+}
+
+.mySlides iframe {
+    width: 100%;
+    height: 636px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.mySlideShade {
+    width: 100%;
+    height: 604px;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 0px;
+    z-index: 9999;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shadePlay {
+    width: 120px;
+    height: 120px;
+
+}
+
+.shadePlay   .fa-play-circle {
+    color: rgba(255,255,255,0.3);
+    font-size: 85px;
+}
+
+.mySlides img {
+    vertical-align: middle;
+    width: 1099px;
+    height: 636px;
+    border-radius: 7px;
+    z-index: -1;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.2);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 7px;} 
+
+
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/* The dots/bullets/indicators */
+.dotContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 636px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 133px;
+  width: 236px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 7px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotContainerMobile {
+    display: none;
+}
+
+.dot .fa-play-circle {
+    color: rgba(255,255,255,0.3);
+    font-size: 40px;
+}
+.dotimg1{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/videoPoster.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg1:hover{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/videoPoster.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg2{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../rsc/img/Video1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg2:hover{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/Video1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg3{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url(../rsc/img/videoPoster.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg3:hover{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/videoPoster.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg4{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../rsc/img/Video1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg4:hover{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/Video1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg5{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(../rsc/img/Video1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.dotimg5:hover{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/Video1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/***mySlides***/
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* Fading animation */
+
+.mySlideText {
+    max-width: 1400px;
+    height: 136px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.meetContainer {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.meetTeam {
+    width: 100%;
+    height: 50%;
+}
+
+.meetTeam h2 {
+
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 0px;
+    margin: 0px;
+    color: #333333;;
+}
+
+.meetMember {
+    width: 100%;
+    height: 50%;
+    margin-right: 270px;    
+}
+
+.meetMember p {
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto;
+    color: #333333;!important;
+}
+
+.videoText{
+    width: 60%;
+    margin: auto;
+}
+
+.videoText1, .videoText2, .videoText3, .videoText4 {
+    display: none;
+
+}
+
+
+/*****Building With Alma*****/
+
+.linkMobileBiulding {
+    display: none;
+}
+.buildingContainer {
+    width: 100%;
+    height: 1737px;
+    background: #EFEFEF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buildingTitle {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buildingTitle h2 {
+    margin: 0;
+    color: #333333;
+}
+
+
+.buildingArticles {
+    width: 100%;
+    height: 806px;
+
+
+}
+
+.buildingArticlesContainer{
+    width: 100%;
+    max-width: 1705px;
+    height: 750px;
+    margin: auto;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buildingArticleContent {
+    width: 555px;
+    height: 100%;
+}
+
+.bArticleText {
+    width: 100%;
+
+    padding: 25px 20px 20px 40px;
+    height: 102px;
+
+}
+
+.bArticleTextParrag {
+    height: 102px;
+}
+
+.bArticleText p {
+    font-size: 25px;
+    color: #333333;
+
+}
+
+.bArticleText h4 {
+    font-size: 28px;
+    color: #FF1D3A;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    
+}
+
+.bArticleText hr{
+    width: 95%;
+    margin: 0;
+    color: #333333;
+
+}
+
+.bArticleText a{
+    color: #A8A8A8;
+    text-decoration: none!important;
+    font-size: 19px;
+    margin-left: 5px;
+    transition: 0.5s;
+
+}
+
+.bArticleText a:hover{
+    color: #FF1D3A;
+
+    transition: 0.5s;
+}
+
+
+.bArticleimage {
+    width: 100%;
+    height: 424px;
+    border-radius: 7px;
+    background: teal;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+
+.bArticleimage h3 { 
+    color: white;
+    font-size: 44px;
+}
+
+
+.buildingUno {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/IndustryNews.jpg);
+    background-position: center;
+}
+
+.buildingDos {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/designArchit.jpg);
+    background-position: center;
+}
+
+.buildingTres {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../rsc/img/philantropy.jpg);
+    background-position: center;    
+}
+
+.separadorBuilding {
+    width: 80%;
+    margin: auto;
+}
+
+.buildingVideo {
+    width: 100%;
+    height: 751px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buildingVideoSlider {
+    width: 1130px;
+    height: 606px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buildingVideoDisplay {
+    width: 1124px;
+    height: 425px;  
+    border-radius: 7px;
+    background: black;
+}
+
+.mySlidesBuilding {
+    width: 1124px;
+    height: 425px;
+    display: none;
+    opacity: 0.7;
+}
+
+#coverMySlide {
+
+    width: 100%;
+    height: 100%;   
+    cursor: pointer;
+}
+
+#iframeristal {
+    display: none;
+}
+
+
+.mySlidesBuilding img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.buildingVideoCarrousel {
+    width: 1124px;
+    height: 135px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buildingVideoPreview {
+    width: 258px;
+    height: 135px;
+    background: black;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.buildingVideoPreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+
+}
+    
+
+
+/* Position the "next button" to the right */
+.nextBuilding {
+  right: 35.2%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+
+.demoBuilding {
+    opacity: 0.6;
+}
+
+.activeBuilding,
+.demoBuilding:hover {
+  opacity: 0.8;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3)
+}
+
+
+
+.buildingVideoText {
+    width: 560px;
+    height: 606px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BuildingVideoInfo {
+    width: 100%;
+    height: 425px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.visitOurBlog {
+    width: 100%;
+    height: 135px;
+
+}
+
+.visitOurBlogMobile {
+    display: none;
+    width: 100%;
+    height: 135px;
+}
+
+.contenidoInfoBuilding {
+    width: 512px;
+    height: 100%;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenidoInfoBuilding h3 {
+    font-size: 44px;    
+    margin: 0;
+    color: #333333; 
+}
+
+.contenidoInfoBuilding h4 {
+    font-size: 28px;
+    color: #FF1D3A;
+    margin: 0;
+
+}
+
+.contenidoInfoBuilding hr {
+    width: 95%;
+    text-align: left;
+}
+
+.contenidoInfoBuilding p {
+    font-size: 24px;
+    margin: 0;
+    color: #333333;
+}
+
+.contenidoInfoBuilding a {
+    color: #A8A8A8;
+    text-decoration: none!important;
+    font-size: 19px;
+    margin-left: 5px;
+    transition: 0.5s;
+
+}
+
+.contenidoInfoBuilding a:hover{
+    color: #FF1D3A;
+    transition: 0.5s;
+}
+
+.buildingButtonContainer {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.buildingButtonContainer a {
+    width: 100%;
+}
+
+.ourBlogButton {
+    width: 100%;
+    height: 69px;
+    background: #FF1D3A;
+    cursor: pointer;
+    color: white;
+    border-radius: 7px;
+    transition: 1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buildingButtonContainer a {
+
+    text-decoration: none;
+}
+
+.ourBlogButton h2 {
+    font-size: 42px;
+}
+
+
+.ourBlogButton:hover {
+    background: white;
+    cursor: pointer;
+    color: #FF1D3A;
+    border: 2px solid #FF1D3A;
+    transition: 1s;
+}
+
+.buildingBlogLinks {
+    width: 100%;
+}
+
+
+/***FOOTER***/
+
+footer {
+    width: 100%;
+    height: 688px;
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer {
+    width: 1532px;
+    height: 478px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerBoxes {
+    height: 100%;
+    width: 33.33%;
+    
+}
+
+.footerMenuContainer {
+    width: 100%;
+    height: 66%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.footerMenuContainer h3, .footerMenuHeader h3 {
+    font-family: 'Passion One', sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    color: white!important;
+}
+
+.footerMenuContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerMenuContainer a, .footerMenuContainer li {
+    text-decoration: none;
+    color: white;
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    transition: 0.5s;
+}
+
+
+
+.footerMenuContainer a:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.footerMenuHeader {
+    width: 100%;
+    height: 20%;
+    max-height: 86px;   
+}
+
+.footerMenuList {
+    width: 100%;
+    height: 80%;    
+}
+
+.footerMenuList li {
+    padding-bottom: 5px;
+}
+
+.footerMenuContainer2 {
+    width: 100%;
+    height: 30%;
+    padding-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerMenuContainer2Mobile {
+    width: 100%;
+    height: 30%;
+    padding-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    display: none;
+}
+
+.footerMenuForm input {
+    width: 336px;
+    height: 38px;
+    border: none;
+    border-radius: 5px 0px 0px 5px ;
+    background: #333333;
+}
+
+.footerMenuForm button {
+    background: #333333;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 0px 5px 5px 0px ;
+    cursor: pointer;
+}
+
+.fa-paper-plane {
+    color: white;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.fa-paper-plane:hover {
+    color: white;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.footerMenuHeader, .footerMenuForm {
+    width: 100%;
+    height: 50%;
+}
+
+ .footerMenuHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.footerMenuForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.footerMenuForm form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footerMenuForm form input {
+    color: white;
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    font-weight: normal;
+    opacity: 0.6;
+    padding-left: 20px;
+
+}
+
+.footerMenuForm form input::placeholder {
+    color: white;
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    font-weight: normal;
+    opacity: 1;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerMenuForm form input::focus {
+    color: white;
+    border: none;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+
+.contactListBox {
+    width: 100%;
+    height: 60px;
+}
+
+.contactListBox h4  {
+    font-family: 'Passion One', sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.contactListBox p  {
+    font-family: 'Crimson Text', serif;
+    color: white;
+    
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0;
+    margin-top: -6px;
+}
+
+#open{
+    color: green;
+    width: 100%;
+    height: 20px;
+    margin-top: -10px;
+    display: none;
+    transition: 0.5s;
+}
+
+#open p, #close p, .allRights p {
+    margin: 0;
+}
+
+#close {
+    color: red;
+    width: 100%;
+    height: 20px;
+    margin-top: -10px;
+    display: none;
+    transition: 0.5s;
+}
+
+.allRights {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Crimson Text', serif;
+    color: white;
+}
+
+.footerSocialList {
+    display: flex;
+}
+
+.footerBrands {
+    width: 50%;
+    height: 100%;
+    
+}
+
+.almaFooterBrand {
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.almaFooterBrand img{
+    width: 140px;
+}
+
+.socialMediaContainer {
+    width: 50%;
+    height: 100%
+} 
+
+.socialMedia {
+    width: 100%;
+    height: 33.33%;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.socialContainer {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    
+}
+
+.instaGram, .linkedIn, .faceBook {
+    font-size: 30px;
+}
+
+.linkedIn img {
+    width: 42px; 
+    height: 42px;   
+}
+
+.youTube {
+    background: url('../rsc/img/youTube.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/********************************************/
+/********************************************/
+/*                WHO WE ARE                */
+/********************************************/
+/********************************************/
+
+.wwaWhoWeAreMobile {
+    display: none;
+}
+
+.whoWeArePageContainer {
+    height: calc(100vh - 188px);
+    width: 100%;
+    max-width: 1660px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wwaCarrousel {     
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.wwaCarrouselPagination {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wwaCarrPicture {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.wwaCarrPicture h1 {
+    font-size: 65px;
+    line-height: 78px; 
+    color: #333333;
+}
+
+.wwaCarrPicture h3{ 
+    font-size: 45px;
+    line-height: 54px;  
+    color: #333333;
+}
+
+.wwaCarrPicture h1, .wwaCarrPicture h3{
+    text-align: center;
+}
+
+.dotpag {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #333333;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.activedotpag {
+    background-color: #FF1D3A;
+}
+
+
+/*****WhoWeAre*****/
+.hrForMobile {
+    display: none;
+}
+.wwaWhoWeAre {
+    height: 910px;
+    width: 100%;
+    max-width: 1660px;
+    margin: auto;
+}
+
+.wwaSectionTitle {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wwaSectionContainer {
+    width: 100%;
+    height: 834px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wwaSectionAuxContainer {
+    width: 541px;
+    height: 760px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auxContainerPicture {
+    width: 100%;
+    height: 414px;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auxContainerPicture h3 {
+    font-size: 45px;
+    line-height: 54px;
+    color: white;
+}
+
+.auxContainerText p {
+    width: 472px;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.ac1 {
+    background: url('../rsc/img/who-we-are-alma-ventures.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ac2 {
+    background: url('../rsc/img/who-we-are-alma-ventures-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ac3 {
+    background: url('../rsc/img/who-we-are-alma-ventures-3.jpg');   
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/***Our FOunders***/
+
+.ourFounders {
+    height: 1486px;
+    width: 100%;
+    max-width: 1660px;
+    margin: auto;
+}
+
+.wwaSectionContainer2 {
+    width: 100%;
+    height: 1326px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ourFoundersBio {
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ourFoundersBio img{
+    border-radius: 7px;
+}
+
+.ourFoundersBioText {
+    width: 485px;
+    height: 459px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 72px;
+
+}
+
+.ourFoundersBioText h3{
+    font-size: 45px;
+    line-height: 54px;
+}
+
+.ourFoundersBioText p {
+    font-size: 25px;
+    line-height: 30px;
+    
+}
+
+.bioRed {
+    color: #FF1D3A;
+}
+
+.bioRight {
+    width: 100%;
+    text-align: right;
+}
+
+/***Our Founders***/
+
+/***Our Team***/
+
+.wwaSectionContainer3 {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.teamOf {
+    color: #FF1D3A;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.contenedorBotones {
+    width: 1660px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    z-index: auto;
+}
+
+.botones {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    margin: 20px 0px;
+}
+
+.myDivs2 {
+    width: 18%;
+    height: 390px;
+    border-radius: 7px;
+    background: #F5F5F4;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.secPic2 {
+    display: flex;
+}
+
+.containerProfile {
+    width: 100%;
+    height: 0px;/*815px*/
+    transition: 0.5s;
+    z-index: -1;
+
+    display: flex;
+    
+}
+
+.profileImgs {
+    width: 59%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileImgsPrincipal {
+    width: 640px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImgsPrincipal img {
+     object-fit: cover;
+     width: 640px;
+     height: 803px;
+     border-radius: 10px;
+}
+
+.profileImgsSecundarias {
+    width: 298px;
+    height: 100%;
+    padding: 7px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profileImgsSecundarias img {
+    border-radius: 7px;
+    width: 100%;
+}
+
+.profileInfo {
+    width: 41%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.profileContainer {
+    width: 568px; 
+    height: 657px;
+    padding: 3px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.profileName {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileName h3 {
+    font-size: 45px;
+    font-family: 'Passion One';
+    margin: 0;
+    color: #333333;
+}
+
+.profileTextContainer {
+    width: 484px;
+}
+
+
+.profileInfo p {
+    font-size: 25px;
+    margin-bottom: 40px;  
+}
+
+.paddingIngo {
+    margin-left: 44px!important;
+    font-weight: bold;
+    margin-top: -40px;
+}
+
+
+.colorParr {
+    color: #FF1D3A;
+}
+
+.profileSocialMedia {
+    width: 100%;
+    height: 37px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileSocialMediaText, .profileSocialMediaIcons {
+    height: 100%;
+    width: 50%;
+}
+
+.profileSocialMediaText {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.profileSocialMediaText p {
+    font-size: 25px;
+    line-height: 30px;
+    color: #7A7A7A;
+    margin: 0;
+}
+
+.profileSocialMediaIcons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profileSocialMediaIcons img {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.myDivs2 h4 {
+    font-family: 'Passion One';
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #333333;
+}
+
+/***Our Team***/
+
+
+
+/********************************************/
+/********************************************/
+/*            END WHO WE ARE                */
+/********************************************/
+/********************************************/
+
+
+
+/********************************************/
+/********************************************/
+/*          PERSONAL PROFILE                */
+/********************************************/
+/********************************************/
+
+.personalProfileContainer {
+    /*height: calc(100vh - 188px);*/
+    height: 1180px;
+    width: 100%;
+    max-width: 1660px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.personalProfileMainPicture {
+    height: 100%;
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personalProfileMainPicture img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.personalProfileMainText {
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileMainTextContent {
+    width: 100%;
+    height: 800px;
+    padding-left: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.personalInfoMainText {
+    height: 275px;
+    width: 536px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.personalInfoMainText h1 {
+    font-size: 121px;
+    line-height: 100px;
+    margin: 0;
+    font-family: 'Passion One', sans-serif;
+    color: #333333;
+}
+
+.personalInfoMainText h2 {
+    font-size: 65px;
+    font-family: 'Passion One', sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.personalInfoMainText h3 {
+    font-size: 30px;
+    font-family: 'Passion One', sans-serif;
+    color: #FF1D3A;
+    margin-bottom: 10px;
+}
+
+.personalInfoMainText p {
+    color: #333333;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+.personalQuoteText {
+    height: 289px;
+    width: 536px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.personalQuoteText q {
+    font-size: 32px;
+    line-height: 43px;
+}
+
+.personalQuoteText p {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.personalProfileSocialMedia {
+    width: 100%;
+    height: 44px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.personalProfileSocialMedia img {
+    height: 100%;
+    margin-right: 20px;
+}
+
+
+/*** Personal Profile Container Section 2 ***/
+
+.personalProfileContainerSection2 {
+    /*height: calc(100vh - 188px);*/
+    height: 1580px;
+    width: 100%;
+    max-width: 1660px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.containerSection2Column1 {
+    height: 100%;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textContainetSection2Col1 {
+    width: 100%;
+    max-width: 890px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerSection2Column1 p {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.containerSection2Column1 blockquote {
+    font-size: 40px;
+    line-height: 48px;
+    width: 672px;
+    margin: 20px auto;
+}
+
+
+.containerSection2Column2 {
+    height: 100%;
+    width: 40%;
+    padding-left: 40px;
+
+}
+
+.containerSection2Col2 {
+    height: 100%;
+    width: 536px;/***********cambiar ancho****/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    padding-top: 91px;
+    padding-bottom: 70px;
+}
+
+.containerSection2Col2 h2 {
+    margin: 0;
+    color: #333333;
+}
+
+.containerSection2Col2 img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.contFirstPost {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contCategoryAndDate {
+    width: 164px;
+    height: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: -20px;
+}
+
+.redText {
+    font-size: 20px;
+    line-height: 24px;
+    color: #FF1D3A;
+    margin: 0;
+}
+
+.postDate {
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.firstPostTitleAndDesc {
+    width: 100%;
+    height: 106px;
+}
+
+.firstPostTitleAndDesc h4{
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Passion One', sans-serif;
+    margin: 0;
+    color: #333333;
+}
+
+.firstPostTitleAndDesc p {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.PostReadMore {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/*** News, Videos & Postcasts ***/
+
+.newsVideosPostcasts {
+
+    height: 2485px;
+    width: 100%;
+    max-width: 1660px;
+    margin: auto;
+    background: #EAEAEA;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+}
+
+.newsVideosHeader {
+    width: 679px;
+    height: 169px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.newsVideosHeader h2 {
+    font-size: 62px;
+    letter-spacing: 0;
+    line-height: 78px;
+    margin: 0;
+    color: #333333;
+}
+
+.newsVideosHeader p {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.newsVideosNewsSection {
+    width: 100%;
+    height: 660px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsVideoSubTitle {
+    width: 100%;
+    height: 46px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newsVideoContent {
+    width: 100%;
+    height: 614px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.newsVideoSliderContainer {
+    width: 80%;
+    height: 560px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.newsContentContainer, .videoContentContainer, .postContentContainer {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 10%;
+    height: 100%;
+}
+
+.newsProfilePost {
+    width: 412px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.newsProfilePost img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.rednewsText{
+    margin-top: 0;
+}
+
+.newsProfilePost h4 {
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Passion One', sans-serif;
+    margin: 0;
+    padding-left: 10px;
+    color: #333333;
+}
+
+.newsProfileParr {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+
+}
+
+
+/********************************************/
+/********************************************/
+/*          END PERSONAL PROFILE            */
+/********************************************/
+/********************************************/
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* SMART TV */
+@media screen and (min-width: 1921px) {
+
+    .fondoLogo {
+        display: none;
+    }
+
+} 
+
+/* DESKTOP */
+@media screen and (max-width: 1920px) {} 
+
+/* laptop */
+@media screen and (max-width: 1660px) {
+
+    .buildingArticleContent {
+        width: 33%;
+    }
+
+    .buildingArticlesContainer {
+        height: 800px;
+        padding: 0 36px;
+    }
+
+    .bArticleimage {
+        height: 400px;
+    }
+
+    .buildingVideo {
+    padding: 0 36px;
+    }
+
+    .buildingVideoDisplay {
+        width: 100%;
+    }
+
+    .buildingVideoSlider {
+        width: 74%;
+    }
+
+    .mySlidesBuilding {
+        width: 100%;
+    }
+
+    .buildingVideoCarrousel {
+        width: 100%;
+    }
+
+    .buildingBlogLinks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .buildingVideoText {
+        width: 26%;
+    }
+
+
+/*************Who We Are**************/
+
+    .containerProfile {
+        padding: 0 10px;
+    }
+
+
+}
+
+
+/* laptop */
+@media screen and (max-width: 1600px) {
+
+
+
+    h1 {
+        font-size: 60px;
+
+    }
+
+    h2 { 
+        font-size: 55px;
+
+     }
+
+
+     h3 { 
+        font-size: 35px;
+
+     }
+
+ /***Menu***/
+
+     .menuLogo {
+        width: 195px;
+        height: 87px;
+     }
+
+     .contenedorMenu {
+        height: 175px;
+     }
+
+
+ /***Carrousel***/
+
+    .carrousel {
+        height: 615px;
+        margin-bottom: 25px;
+    }
+
+
+
+/***How we innovate***/
+
+    .innovate{
+        height:780px;
+    }
+
+    .innovateContentContainer {
+        height: 100%; 
+        width: 943px;
+    }
+
+    .interactiveLogo {
+        width: 446px;
+        height: 593px;
+    }
+
+    .fondoLogo {
+        left: 25%;
+    }
+
+    .innovateContent{
+        height: 597px; 
+    }
+
+    .innovateTitle {
+        height: 160px;
+    }
+
+    .interactiveLogo {
+        width: 449px;
+        height: 597px;
+    }
+
+
+    .innovateCards {
+        height: 100%;
+    }
+
+    .cardContainer  {
+        width: 360px;
+        height: 190px;
+    }
+
+    .flip-box-front h3 {
+        font-size: 33px;
+    }
+
+    .flip-box-back p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .flip-box-back h4 {
+    font-size: 25px;
+    }
+
+    .almaA {
+        background-size: 56px 55px;
+    }
+    .almaM {
+        background-size: 73px 60px;
+    }
+    .almaL {
+        background-size: 41px 67px;
+    }
+
+/****Our Brands*****/
+
+    .ourBrandsTitle {
+        height: 160px;
+    }
+
+    .ourBrandsLogoContainer {
+        width: 30%;
+    }
+
+    .brandPicture {
+        height: 100%;
+    }
+
+    .brandContentContainer {
+        height: 500px;
+    }
+
+/********************/
+    .meetTeam h2 {
+
+        font-size: 40px;
+
+    }
+
+    .textContainer h3 {
+        font-size: 35px;
+
+    }
+
+
+/**Building**/
+
+    .bArticleimage {
+        height: 360px;
+    }
+
+
+/***Footer***/
+
+    .socialContainer  {
+        width: 42px;
+        height: 42px;
+    }
+
+
+/*************Who We Are**************/
+
+    .wwaSectionAuxContainer{
+        width: 33%;
+        padding: 0 10px;
+    }
+
+
+    .wwaSectionContainer2 {
+        padding: 0 10px;
+    }
+
+    .contenedorBotones {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .profileImgsPrincipal {
+        width: 605px;
+        height: auto;
+    }
+
+    .profileImgsPrincipal img {
+        width: 100%;
+    }
+
+    .profileImgsSecundarias {
+        width: 281px;
+    }
+
+    .profileImgsPrincipal img {
+        height: auto;
+    }
+
+    .profileImgsSecundarias {
+        padding: 0;
+        height: 759px;
+    }
+
+/*************Personal Profile**************/
+
+
+
+}
+
+
+@media screen and (max-width: 1536px) {
+
+    footer {
+        padding: 44px;
+    }
+
+/************Who We Are.html************/
+
+    .ourFoundersBioText {
+        margin-right: 10px;
+    }
+
+    .ourFoundersBio img {
+        width: 64%;
+    }
+
+    .profileImgsPrincipal {
+        width: 579px;
+
+    }
+
+    .profileImgsSecundarias {
+        height: 726px;
+    }
+
+
+/************Personal Profile************/
+
+    .personalProfileContainer{
+        padding: 0 24px;
+    }
+
+    .personalProfileMainPicture img {
+        width: 100%;
+    }
+
+    .textContainetSection2Col1 {
+        margin-left: 24px;
+
+    }
+
+    .newsProfilePost {
+        width: 33%;
+    }
+
+
+
+
+
+}/**/
+
+
+
+@media screen and (max-width: 1440px) {
+
+
+/****Menu****/
+
+    .contenedorMenu {
+        height: 140px;
+    }
+
+    .menu {
+        padding: 0 50px;
+    }
+
+    .menuLogo {
+       width: 13%;
+    }
+
+    .menuLinks {
+         width: 80%;
+    }
+
+    .buscador {
+        width: 7%;
+    }
+
+    .menu a {
+        font-size: 21px;
+    }
+
+    #navbar a  {
+        padding: 0;
+    }
+
+
+
+
+/***Carousel**/
+
+    .carrousel {
+        height: 550px;
+       
+    }
+
+    .swiper-slide h2, .swiper-slide img {
+        margin-left: 88px;
+    }
+
+    .swiper-container {
+        border: 7px solid black;
+    }
+
+
+/*How We Innovate*/
+
+
+    .fondoLogo {
+        left: 21%;
+    }
+
+/*Our Brands*/
+
+
+    .textContainer {
+        height: 100%;
+    }
+
+    .brandContentContainer {
+        height: 480px;
+    }
+
+    .ourBrandsLogoContainer {
+        width: 37%;
+    }
+
+    .textContainer h3 {
+        font-size: 30px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        line-height: 42px;
+    }
+
+    .ourBrandsSocialMediaIcon {
+        width: 64%;
+    }
+
+
+/*Who We Are*/
+
+    .whoWeAreVideo {
+        width: 100%;
+       }
+
+    .slideshow-container  {
+        padding: 0 36px;
+    }
+
+    .mySlides {
+        height: 607px;
+        width: 1078px;
+    }
+
+    .dotContainer {
+        height: 607px;
+    }
+
+
+/******Building******/
+
+
+    .buildingArticlesContainer {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 36px;
+    }
+
+    .buildingArticleContent {
+        width: 31%;
+        height: 95%;
+    }
+
+    .bArticleimage {
+        height: 300px;
+    }
+
+    .bArticleimage h3 {
+        color: white;
+        font-size: 38px;
+    }
+
+    .buildingVideo {
+        padding: 0 36px;
+    }
+
+    .buildingVideoDisplay {
+        width: 100%;
+    }
+
+    .buildingVideoSlider {
+        width: 74%;
+    }
+
+    .mySlidesBuilding {
+        width: 100%;
+    }
+
+    .buildingVideoCarrousel {
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .buildingBlogLinks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .buildingVideoText {
+
+        width: 26%;
+    }
+
+    .contenidoInfoBuilding h3 {
+        font-size: 34px;
+    }
+
+    .contenidoInfoBuilding h4 {
+        font-size: 26px;
+    }
+
+    .contenidoInfoBuilding p {
+        font-size: 22px;
+    }
+
+    .nextBuilding {
+        right: 27.2%;
+    }
+
+    .buildingVideoPreview {
+        width: 225px;
+        height: 121px;
+    }
+
+
+/***footer***/
+
+    footer {
+        padding: 44px;
+    }
+
+
+    .socialContainer {
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    .socialMedia {
+        justify-content: flex-end;
+    }
+
+    .footerMenuContainer a, .footerMenuContainer li {
+        font-size: 25px;
+    }
+
+
+
+/****************WHO WE ARE****************/
+    
+    .profileName h3 {
+        font-size: 35px;
+        font-family: 'Passion One';
+        margin: 0;
+        text-align: left;
+        width: 58%;
+    }
+
+    .profileInfo  {
+
+        margin-bottom: 35px;
+    }
+    .auxContainerText p {
+        width: 100%;
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    .auxContainerPicture {
+        height: 399px;
+    }
+
+    .wwaSectionContainer {
+        height: 819px;
+    }
+
+    .ourFounders {
+        height: 1333px;
+    }
+
+    .ourFoundersBioText {
+        width: 465px;
+        height: 471px;
+    }
+
+    .wwaSectionContainer2 {
+        width: 100%;
+        height: 1152px;
+    }
+
+    .profileImgsSecundarias {
+        height: 684px;
+    }
+
+    .profileImgsPrincipal {
+        width: 545px;
+    }
+
+    .profileImgsSecundarias {
+        width: 257px;
+    }
+
+    .profileContainer {
+        width: 94%;
+        padding-bottom: 28px;
+    }
+
+    /************Personal Profile************/
+
+
+    .textContainetSection2Col1 {
+        max-width: 820px;
+    }
+
+    .containerSection2Column2 {
+        padding-right: 20px;
+    }
+
+    .containerSection2Col2 {
+        width: 100%; 
+        padding-top: 42px;
+    }
+
+    .PostReadMore .redText {
+        margin-top: 15px;
+    }
+
+    .personalProfileContainerSection2 {
+        height: 1508px;
+    }
+
+
+}/**/
+
+
+
+@media screen and (max-width: 1400px) {
+
+    /**Menu**/
+
+    .menu a {
+        font-size: 19px;
+    }
+
+/***Innovate***/
+    
+    .fondoLogo {
+        left: 19%;
+    }
+
+    /***Build***/
+
+    .buildingArticleContent {
+        width: 440px;
+    }
+
+    .buildingBlogLinks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .buildingBlogLinks {
+        width: 90%;
+    }
+
+    .separadorBuilding {
+        width: 90%;
+    }
+
+    .BuildingVideoInfo {
+        justify-content: flex-start;
+    }
+
+    .contenidoInfoBuilding {
+        width: 432px;
+     }
+
+    .bArticleText {
+        height: 205px;
+    }
+
+    .bArticleTextParrag hr {
+        width: 95%;
+    }
+
+    .buildingVideoSlider {
+        width: 1000px;
+    }
+
+    .buildingVideoText {
+        display: flex;
+        width: 400px;
+    }
+
+    .buildingVideoDisplay {
+        width: 100%;
+    }
+
+    .mySlidesBuilding {
+        width: 100%;
+    }
+
+    .buildingVideoCarrousel {
+        width: 100%;
+    }
+
+    .contenidoInfoBuilding {
+        width: 400px;
+    }
+
+    .contenidoInfoBuilding hr {
+        width: 95%;
+    }
+
+    .buildingVideoPreview {
+        width: 210px;
+        height: 118px;
+    }
+
+    .nextBuilding {
+        right: 31.2%;
+    }
+
+/*********WHO WE ARE*********/
+
+    .profileImgsPrincipal {
+        width: 530px;
+    }
+
+    .profileImgsSecundarias {
+        height: 665px;
+    }
+
+    .profileSocialMedia {
+        margin-bottom: 5px;
+    }
+
+
+/************Personal Profile************/
+
+    .personalProfileContainer {
+        height: 1146px;
+    }
+
+    .personalProfileMainPicture img {
+        height: auto
+    }
+
+    .personalInfoMainText {
+        height: 275px;
+        width: 100%;
+    }
+
+    .personalQuoteText {
+        height: 289px;
+        width: 100%;
+    }
+
+    .newsVideoSubTitle img {
+        width: 33%;
+    }
+
+
+
+
+}/**/
+
+
+
+/* laptop */
+@media screen and (max-width: 1366px) {
+
+
+/***Menu***/
+
+    .contenedorMenu {
+        height: 146px;
+    }
+
+    #navbar .menu {
+        width: 100%;
+    }
+
+    .menuLogo img {
+        width: 87%;
+    }
+
+/***How we Innovate***/
+
+    .fondoLogo {
+        left: 20%;
+    }
+
+/***Our Brands***/
+
+    .textContainer h3 {
+        font-size: 28px;
+        line-height: 39px;
+    }
+
+/***Who We Are***/
+
+    .whoWeAreVideo {
+        width: 100%;
+    }
+
+    .dotContainer {
+        padding-bottom: 23px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 130px;
+        width: 224px;
+     }
+
+     .mySlides, .mySlideShade {
+        display: none;
+        width: 80%;
+        background: white;
+
+     }
+
+ /***Building***/
+
+     .buildingArticleContent {
+        width: 33%;
+    }
+
+    .bArticleimage {
+        width: 100%;
+        height: 318px;
+    }
+
+    .bArticleimage h3 {
+        font-size: 35px;
+    }
+
+     .buildingVideoSlider {
+        width: 80%;
+    }
+
+    .buildingVideoDisplay, .buildingVideoCarrousel {
+        width: 98%;
+    }
+
+    .buildingVideoCarrousel {
+        align-items: flex-end;
+    }
+
+    .nextBuilding {
+        right: 32.2%;
+    }
+
+
+
+/*************WHO WE ARE**************/
+
+    .wwaCarrPicture {
+        padding: 0 5px;
+    }
+
+    .auxContainerPicture {
+        height: 359px;
+    }
+
+    .wwaSectionContainer {
+        height: 720px;
+    }
+
+    .wwaWhoWeAre {
+        height: 857px;
+    }
+
+    .ourFoundersBioText {
+        padding: 0 5px;
+        height: 496px;
+    }
+
+    .profileImgsSecundarias {
+        width: 242px;
+    }
+
+    .profileContainer {
+        padding-bottom: 10px;
+    }
+
+/************Personal Profile************/
+
+    .newsVideosPostcasts {
+        height: 2332px;
+    }
+
+}
+
+
+
+
+/* laptop */
+@media screen and (max-width: 1360px) {
+
+
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 { 
+        font-size: 50px;
+    }
+
+    h3 { 
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+
+/***Innovate***/
+
+.innovate {
+    height: 800px;
+}
+
+.innovateTitle {
+    height: 170px;
+}
+
+
+/***Our Brands***/
+
+.ourBrandsTitle {
+    height: 150px;
+}
+
+.ourBrands {
+    height: 1925px;
+}
+
+.ourBrandsContent {
+    height: 515px;
+}
+
+.brandPicture {
+    height: 460px;
+}
+
+.textContainer{
+    padding: 0 0 0 25px;
+    height: 460px;
+}
+
+.textContainer h3 {
+    font-size: 32px;
+
+}
+
+.textContainer p {
+    font-size: 22px!important;
+}
+
+.whoWeAreVideo {
+    width: 98%;
+    height: 587px;  
+}
+
+.mySlides, .mySlideShade {
+    max-width: 1062px;
+}
+
+/****Who We Are***/
+
+.whoWeAre {
+    height: 943px;
+}
+
+.whoWeAreTitle {
+    height: 150px;
+}
+
+.whoWeAreContainer {
+    height: 775px;
+}
+
+.dotContainer {
+    padding-bottom: 40px;
+}
+
+/*****Building With Alma*****/
+
+.buildingTitle {
+    height: 150px;
+}
+
+.buildingContainer {
+    height: 1655px;
+}
+
+.buildingArticles {
+    height: 762px;
+}
+
+.buildingArticleContent {
+    width: 33%;
+}
+
+.bArticleimage {
+    width: 100%;
+    height: 300px;
+}
+
+.bArticleText {
+    height: auto;
+    padding: 20px 10px 20px 20px;
+}
+
+.bArticleText p {
+    font-size: 22px;
+}
+
+.bArticleText hr {
+    max-width: 95%;
+}
+
+.buildingBlogLinks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buildingVideo {
+    height: 677px;
+}
+
+.buildingVideoText, .buildingVideoCarrousel {
+    width: 824px;
+}
+
+.buildingVideoText, .buildingVideoSlider{
+    height: 550px;
+}
+
+.buildingVideoSlider {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buildingVideoCarrousel {
+    align-items: flex-end;
+}
+
+.separadorBuilding {
+    margin: 0px;
+}
+
+.buildingVideoPreview {
+    width: 200px;
+    height: 108px;
+}
+
+.nextBuilding {
+    right: 38.2%;
+}
+
+
+.mySlidesBuilding {
+    width: 100%;
+}
+.contenidoInfoBuilding {
+    width: 488px;
+}
+
+
+.contenidoInfoBuilding h3 {
+    font-size: 32px;
+}
+
+.contenidoInfoBuilding h4 {
+    font-size: 26px;
+}
+
+.contenidoInfoBuilding p {
+    font-size: 22px;
+}
+
+
+.buildingVideoText {
+    width: 483px;
+}
+
+.buildingVideoCarrousel {
+    width: 98%;
+}
+
+.buildingVideoPreview {
+    width: 190px;
+    height: 97px;
+}
+
+.visitOurBlog {
+    width: 100%;
+    height: 124px;
+}
+
+
+}
+
+
+
+/* laptop */
+@media screen and (max-width: 1280px) {
+
+/***Menu***/
+    .menuLogo {
+        width: 145px;
+    }
+
+    .menu a {
+        font-size: 17px;
+    }
+
+    #navbar a {
+        padding: 0px;
+    }
+
+/*Our Brands**/
+
+    .textContainer h3 {
+        font-size: 30px;
+    }
+
+    /***Who We Are***/
+
+    .slideshow-container {
+        align-items: flex-start;
+    }
+
+    .dotContainer {
+        padding-bottom: 0px;
+        height: 525px;
+        align-items: flex-end;
+    }
+
+    .dot {
+        height: 104px;
+        width: 195px;
+    }
+
+/***Building***/
+
+    .buildingArticleContent {
+        width: 30%;
+    }
+
+    .bArticleimage {
+        width: 100%;
+        height: 314px;
+    }
+
+    .bArticleimage h3 {
+        font-size: 34px;
+    }
+
+
+    .bArticleTextParrag h4{
+        height: 123px;
+        margin-top: 37px;
+    }
+
+    .buildingVideoText {
+        height: 553px;
+    }
+
+    .buildingVideoPreview {
+        width: 171px;
+        height: 87px;
+    }
+
+    .buildingButtonContainer {
+        width: 97%; 
+    }
+
+
+/*********WHO WE ARE**********/
+
+    .ourFoundersBioText {
+        padding: 0 15px;
+    }
+
+    .ourFoundersBioText p {
+        font-size: 23px;
+    }
+
+    .wwaSectionContainer2 {
+        width: 100%;
+        height: 1103px;
+    }
+
+    .ourFounders {
+        height: 1271px;
+    }
+
+
+    .profileImgsPrincipal {
+        width: 478px;
+    }
+
+    .profileImgsSecundarias {
+        height: 599px;
+    }
+
+    .profileImgsSecundarias img {
+        width: 96%;
+    }
+
+    .profileContainer {
+        height: 94%;
+    }
+
+    .profileTextContainer {
+        width: 100%;
+        height: 86%;
+    }
+
+    .paddingIngo {
+        margin-top: -11px;
+    }
+
+    .profileInfo {
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    .profileInfo p {
+    font-size: 23px;
+    }
+
+    .profileSocialMediaText p {
+        font-size: 24px;
+    }
+
+
+/*********Personal Profile**********/
+
+    .personalProfileContainer {
+        height: 1010px;
+    }
+
+    .containerSection2Col2 {
+        padding-top: 16px;
+    }
+
+    .personalProfileContainerSection2 {
+        height: 1573px;
+    }
+
+    .textContainetSection2Col1 {
+        max-width: 734px;
+    }
+
+    .containerSection2Column1 blockquote {
+        font-size: 38px;
+        line-height: 46px;
+        width: 90%;
+    }
+
+    .newsProfilePost {
+        padding: 2px;
+    }
+
+    .newsProfileParr {
+        font-size: 23px;
+        line-height: 28px;
+        padding: 2px;
+    }
+
+
+}/**/
+
+
+
+/* laptop */
+@media screen and (max-width: 1152px) {
+
+/***Menu***/
+
+.menu a {
+    font-size: 15px;
+}
+
+#navbar a {
+    font-size: 13px;
+}
+
+/***Carrousel**/
+.carrousel {
+    height: 592px;
+}
+
+/**How We Innovate**/
+
+.fondoLogo {
+    left: 15%;
+}
+
+/*Our Brands*/
+.textContainer h3 {
+    font-size: 27px;
+}
+
+.dotimg4{
+    display: none;
+}
+
+.dotContainer {
+    padding-bottom: 0px;
+    height: 494px;
+}
+
+.slideshow-container {
+    height: 500px;
+}
+
+.mySlides, .mySlideShade {
+    height: 100%;
+}
+
+
+/***Who We Are***/
+
+.whoWeAre {
+    height: 880px;
+}
+
+
+.dotContainer {
+    padding-bottom: 0px;
+    height: 458px;
+}
+
+.whoWeAreVideo {
+    width: 98%;
+    height: 507px;
+}
+
+.whoWeAreContainer {
+    height: 705px;
+}
+
+
+/***Building***/
+
+.bArticleimage h3 {
+    font-size: 30px;
+}
+
+
+.contenidoInfoBuilding hr {
+    width: 86%;
+}
+.buildingArticleContent {
+    width: 33%;
+}
+
+.buildingVideoSlider {
+    width: 60%;
+ }
+
+.buildingVideoText {
+    width: 40%;
+    padding-right: 5px;
+}
+
+.contenidoInfoBuilding {
+    width: 100%;
+    padding: 0;
+    padding-left: 25px;
+}
+
+.buildingButtonContainer {
+    width: 100%;
+    padding: 0;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+
+.buildingVideoPreview {
+    width: 145px;
+    height: 75px;
+}
+
+footer em {
+
+    font-size: 20px;
+
+}
+
+/**********WHO WE ARE**************/
+
+    .wwaWhoWeAre {
+        height: 800px;
+    }
+
+    .wwaSectionAuxContainer {
+        height: 618px;
+     }
+
+    .auxContainerPicture {
+        height: 349px;
+    }
+
+    .auxContainerText p {
+        width: 100%;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .wwaSectionContainer {
+        height: 622px;
+    }
+
+    .wwaSectionContainer2 {
+        width: 100%;
+        height: 958px;
+    }
+
+    .ourFounders {
+        height: 1110px;
+    }
+
+    .ourFoundersBio {
+        height: 486px;
+    }
+
+    .ourFoundersBioText {
+        padding: 0 14px;
+        height: 400px;
+    }
+
+    .ourFoundersBio img {
+        width: 62%;
+    }
+
+    .ourFoundersBioText p {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .myDivs2 {
+        height: 313px;
+    }
+
+    .myDivs2 img {
+        width: 100%;
+    }
+
+    .botones {
+        height: 328px;
+    }
+
+    .profileImgsSecundarias {
+        height: 537px;
+    }
+
+    .profileImgsPrincipal {
+        width: 428px;
+    }
+
+    .profileImgsSecundarias {
+        width: 202px;
+    }
+
+    .profileName h3 {
+        font-size: 28px;
+        width: 54%;
+    }
+
+    .paddingIngo {
+        margin-left: 34px!important;
+    }
+
+    .profileTextContainer {
+        width: 100%;
+        height: 85%;
+    }
+
+    .profileInfo p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profileSocialMediaText p {
+        font-size: 20px;
+    }
+
+    .profileSocialMedia {
+        height: 25px;
+    }
+
+
+/**********Personal Profile**************/
+
+    .personalInfoMainText h1 {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .personalInfoMainText h2 {
+        font-size: 60px;
+        margin-bottom: 0px;
+    }
+
+    .personalQuoteText q {
+        font-size: 29px;
+        line-height: 40px;
+    }
+
+    .personalProfileContainer {
+        height: 923px;
+    }
+
+    .containerSection2Column1 p {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .containerSection2Column1 blockquote {
+        font-size: 33px;
+        line-height: 43px;
+        width: 88%;
+    }
+
+    .containerSection2Col2 h2 {
+        font-size: 45px;
+    }
+
+    .textContainetSection2Col1 {
+        margin-left: 20px;
+    }
+
+    .textContainetSection2Col1 {
+        max-width: 669px;
+    }
+
+    .personalProfileContainerSection2 {
+        height: 1403px;
+        margin-bottom: 21px;
+    }
+
+    .newsVideosHeader h2 {
+        font-size: 59px;
+        line-height: 70px;
+    }
+
+    .newsProfileParr {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    .newsVideoSliderContainer {
+        width: 80%;
+        height: 527px;
+    }
+
+    .newsVideosHeader p {
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .newsVideosNewsSection {
+        height: 631px;
+    }
+
+    .newsVideosPostcasts {
+        s
+
+}/**/
+
+/* laptop */
+@media screen and (max-width: 1024px) {
+
+h1 {
+    font-size: 50px;
+
+}
+
+h2 { 
+    font-size: 45px;
+
+ }
+
+
+h3 { 
+    font-size: 29px;
+
+ }
+
+ h4 {
+    font-size: 24px;
+ }
+
+ p {
+    font-size: 20px;
+ }
+
+
+
+/***Menu***/
+
+.contenedorMenu {
+    height: 150px;
+}
+
+.menuLogo {
+    width: 125px;
+}
+
+.activeMenu {
+    width: 90px;
+}
+
+.menuLinks {
+    width: 75%;
+}
+
+.menuLinks a {
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+#navbar a {
+    padding: 7px;
+}
+
+
+/**Carrousel**/
+
+.carrousel {
+    height: 550px;
+}
+
+.swiper-slide h2, .swiper-slide img {
+    margin-left: 38px;
+}
+
+.swiper-slide h2 {
+    font-size: 40px;
+}
+
+.flip-box-back h4 {
+    display: none;
+}
+
+
+/***Innovate***/
+
+.innovate {
+    height: 720px;
+}
+
+.innovateContentContainer {
+    width: 97%;
+    justify-content: space-around;
+}
+
+.innovateContent {
+    height: 600px;
+}
+
+.innovateTitle {
+    height: 120px;
+}
+.interactiveLogo {
+    width: 427px;
+    height: 567px;
+    margin-left: 42px;
+}
+
+.fondoLogo {
+    left: 12.5%;
+}
+
+.innovateCards {
+    height: 567px;
+}
+
+.cardContainer {
+    width: 80%;
+    height: 30%;
+}
+
+.flip-box-back p {
+    font-size: 20px;
+}
+
+
+
+/***Our Brands***/
+
+.ourBrands {
+    height: 1500px;
+}
+
+.ourBrandsTitle {
+    height: 120px;
+}
+
+.ourBrandsContent {
+    height: 30%;
+}
+
+.brandContentContainer {
+    width: 90%;
+    height: 100%;
+}
+
+.brandPicture {
+    height: 74%;
+}
+
+.contentText {
+    height: 74%;
+}
+
+.textContainer {
+    height: 100%;
+}
+
+.ourBrandsSocialMedia, .ourBrandsLogoContainer {
+    width: 34%;
+}
+
+.ourBrandsSocialMedia {
+    justify-content: space-around;
+}
+
+.textContainer h3{
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    line-height: 39px;
+}
+
+.brandPicture img {
+    width: 50%;
+}
+
+.separador {
+    width: 90%;
+    margin: 0px;
+}
+
+
+
+/***Who we Are***/
+
+.whoWeAre {
+    height: 810px;
+}
+
+.whoWeAreTitle {
+    height: 120px;
+}
+
+.whoWeAreContainer {
+    height: 615px;
+}
+
+.whoWeAreVideo {
+    height: 80%;
+}
+
+.mySlideText {
+    height: 20%;
+}
+
+
+.mySlides, .mySlideShade {
+    height: 100%;
+}
+
+.slideshow-container {
+    height: 457px;
+}
+
+.dotContainer {
+    height: 417px;
+    width: 185px;
+}
+
+.mySlides iframe {
+    height: 100%;
+}
+
+.dot {
+    height: 102px;
+    width: 180px;
+}
+
+.meetContainer {
+    margin-top: 0px;
+}
+
+.meetMember p {
+    font-size: 20px;
+}
+
+
+/***Building with Alma***/
+
+.buildingContainer {
+    height: 1498px;
+}
+.buildingTitle{
+    height: 120px;
+}
+
+.buildingArticleContent {
+    width: 33%;
+}
+
+.buildingArticles {
+    height: 661px;
+}
+
+.bArticleimage {
+    height: 270px;
+}
+
+.bArticleimage h3 {
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.bArticleText {
+    padding: 10px 10px 20px 20px;
+}
+
+.bArticleText p {
+    font-size: 20px;
+}
+
+.bArticleText h4 {
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 17px;
+}
+
+.bArticleTextParrag {
+    height: 130px;
+}
+
+.separadorBuilding{
+    width: 96%;
+}
+
+.buildingVideoDisplay, .buildingVideoCarrousel {
+    width: 100%;
+
+}
+.buildingVideoText {
+    width: 30%;
+}
+
+.buildingVideoPreview {
+    width: 153px;
+    height: 83px;
+}
+
+
+.buildingVideoSlider {
+    width: 688px;
+    justify-content: space-between;
+}
+
+.contenidoInfoBuilding{
+    width: 100%;
+    height: 100%;
+}
+
+.contenidoInfoBuilding h3 {
+    font-size: 28px;
+    line-height: 35px;
+}
+
+.contenidoInfoBuilding h4 {
+    font-size: 24px;
+
+}
+
+.contenidoInfoBuilding p {
+    font-size: 18px;
+}
+
+.contenidoInfoBuilding a{
+    font-size: 15px;
+}
+
+.visitOurBlog {
+    height: 99px;
+}
+
+.ourBlogButton h2 {
+    font-size: 32px;
+}
+
+
+/***Footer****/
+
+    footer{
+        height: 538px;
+    }
+
+    .footerMenuHeader, .footerMenuForm {
+        width: 95%;
+        height: 50%;
+    }
+
+    .footerMenuContainer h3, .footerMenuHeader h3 {
+        font-size: 28px;
+    }
+
+    .footerMenuContainer a, .footerMenuContainer li, .contactListBox h4, .contactListBo  p {
+        font-size: 24px;
+    }
+
+
+/****WHO WE ARE****/
+
+    .auxContainerPicture {
+        height: 242px;
+    }
+
+    .auxContainerText p {
+        width: 100%;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .wwaSectionAuxContainer {
+        height: 500px;
+    }
+
+    .wwaSectionContainer {
+        height: 501px;
+    }
+
+    .wwaWhoWeAre {
+        height: 657px;
+    }
+
+    .ourFoundersBio {
+        height: 394px;
+    }
+
+    .ourFoundersBio img {
+        width: 60%;
+    }
+
+    .ourFoundersBioText h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .ourFoundersBioText p {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .ourFoundersBioText {
+        height: 369px;
+    }
+
+    .wwaSectionContainer2 {
+        height: 786px;
+    }
+
+    .ourFounders {
+        height: 947px;
+    }
+
+    .bioRed {
+        margin: 5px;
+    }
+
+
+    .profileImgsPrincipal {
+        width: 377px;
+    }
+
+    .profileImgsSecundarias {
+        width: 190px;
+    }
+
+    .profileImgsSecundarias {
+        height: 471px;
+    }
+
+    .profileName img {
+        display: none!important;
+    }
+
+    .profileName h3 {
+        font-size: 28px;
+        width: 67%;
+        margin-left: 32px;
+    }
+
+    .profileInfo p {
+        margin-bottom: 0px;
+    }
+
+    .colorParr {
+        margin-top: 10px;
+    }
+
+    .profileTextContainer p {
+        margin-top: 10px;
+    }
+
+    .profileInfo p {
+        font-size: 19px;
+
+    }
+
+    .profileSocialMediaText p {
+        font-size: 18px;
+    }
+
+
+/****Personal Profile****/
+
+    .personalProfileContainer {
+        height: 780px;
+    }
+
+    .personalQuoteText q {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .personalQuoteText p {
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+
+}/*********/
+
+
+
+/* laptop */
+@media screen and (max-width: 800px) {
+
+h1 {
+    font-size: 48px;
+
+}
+
+h2 { 
+    font-size: 42px;
+
+ }
+
+
+h3 { 
+    font-size: 25px;
+
+ }
+
+ h4 {
+    font-size: 22px;
+ }
+
+ p {
+    font-size: 18px;
+ }
+
+
+/**Menu**/
+
+.contenedorMenu {
+    height: 120px;
+}
+
+.menuLogo {
+    width: 90px;
+}
+
+.menuLinks a {
+    font-size: 10px;
+    margin-left: 23px;
+}
+
+#navbar a {
+    font-size: 11px;
+    padding: 0px;
+}
+
+.activeMenu {
+    width: 80px;
+    height: 25px;
+}
+
+.fa-search {
+
+    font-size: 14px;
+
+}
+
+/**Carrousel**/
+
+.carrousel {
+    height: 459px;
+}
+
+.swiper-slide h2 {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.swiper-slide img {
+    width: 200px;
+}
+
+/***How We Innovate***/
+
+.innovate {
+    height: 611px;
+}
+
+.fondoLogo {
+    left: 17%;
+    width: 200px;
+}
+
+.innovateContent {
+    height: 481px;
+}
+
+.interactiveLogo { 
+    width: 432px;
+    height: 454px;
+}
+
+.almaA {
+    background-size: 44px 44px;
+}
+.almaM {
+    background-size: 58px 48px;
+}
+.almaL {
+    background-size: 33px 53px;
+}
+
+.topRightContent, .cubeAShape, .cubeLShape, .cubeMShape {
+    background-size: 54px 54px;
+}
+
+.innovateCards {
+    height: 454px;
+}
+
+.flip-box-front h3 {
+    font-size: 25px;
+}
+
+/**Our Brands**/
+
+.ourBrands {
+    height: 1390px;
+}
+
+
+.textContainer h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.textContainer p {
+    font-size: 18px!important;
+}
+
+
+/***Who We Are***/
+
+.dotContainer {
+    height: 300px;
+}
+
+.dot {
+    height: 82px;
+    width: 144px;
+}
+
+.slideshow-container {
+    height: 317px;
+}
+
+.whoWeAreContainer {
+    height: 493px;
+}
+
+.whoWeAre {
+    height: 669px;
+}
+
+.meetTeam h2 {
+    font-size: 32px;
+}
+
+.meetMember p {
+    font-size: 18px;
+}
+
+
+/***Building***/
+
+.buildingContainer {
+    height: 1292px;
+}
+
+.bArticleimage h3 {
+    font-size: 21px;
+    line-height: 27px;
+}
+
+.bArticleText p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.bArticleText h4 {
+    font-size: 23px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.bArticleText a {
+    font-size: 16px;
+}
+
+.bArticleimage {
+    height: 180px;
+}
+
+.buildingArticles {
+    height: 540px;
+}
+
+.buildingArticlesContainer {
+    height: 592px;
+}
+
+.buildingVideo {
+    height: 591px;
+}
+
+.buildingVideoSlider {
+    width: 553px;
+
+}
+
+
+.buildingVideoPreview {
+    width: 122px;
+    height: 67px;
+}
+
+.ourBlogButton h2 {
+    font-size: 23px;
+}
+
+
+/***Footer***/
+
+footer {
+    height: 497px;
+}
+
+.footerMenuContainer h3, .footerMenuHeader h3 {
+    font-size: 25px;
+}
+
+.contactListBo p {
+    font-size: 17px;
+}   
+
+.contactListBox p {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+}
+
+.almaFooterBrand img {
+    width: 90px;
+}
+
+.linkedIn img {
+    width: 30px;
+    height: 30px;
+}
+
+.instaGram img, .faceBook img {
+    width: 30px;
+    height: 30px;
+}
+
+.footerMenuContainer a, .footerMenuContainer li, .contactListBox h4, .contactListBo p {
+    font-size: 18px;
+}
+
+
+/********WHO WE ARE********/
+
+    .wwaSectionTitle {
+        height: 120px;
+    }
+
+    .wwaCarrousel {
+        height: 100%;
+    }
+
+    .whoWeArePageContainer {
+        height: calc(100vh - 120px);
+    }
+
+    .wwaCarrPicture h1 {
+        font-size : 58px;
+        line-height: 65px;
+    }
+
+    .auxContainerPicture {
+        height: 180px;
+    }
+
+    .auxContainerText p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .wwaSectionContainer {
+        height: 407px;
+    }
+
+    .wwaSectionAuxContainer {
+        height: 401px;
+    }
+
+    .wwaWhoWeAre {
+        height: 518px;
+    }
+
+
+    .ourFoundersBio {
+        height: 276px;
+    }
+
+    .ourFoundersBioText {
+        height: 260px;
+    }
+
+    .ourFoundersBioText h3 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .ourFoundersBioText p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .ourFoundersBio img {
+        width: 55%;
+    }
+
+    .wwaSectionContainer2 {
+        height: 595px;
+    }
+
+    .ourFounders {
+        height: 712px;
+    }
+
+    .botones {
+        height: 232px;
+    }
+
+    .myDivs2 {
+        height: 218px;
+    }
+
+    .myDivs2 h4 {
+        font-family: 'Passion One';
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+    }
+
+    .profileImgsPrincipal {
+        width: 295px;
+    }
+
+    .profileImgsSecundarias {
+        height: 367px;
+        width: 138px;
+    }
+
+    .profileContainer {
+        width: 97%;
+        padding: 0;
+    }
+
+    .profileName h3 {
+        font-size: 28px;
+        width: 100%;
+        margin-left: 32px;
+        line-height: 20px;
+    }
+
+    .profileName h3 {
+        font-size: 25px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .paddingIngo {
+        margin-left: 0px!important;
+    }
+
+    .profileInfo p {
+        font-size: 16px;
+    }
+
+    .profileSocialMediaText p {
+        font-size: 15px;
+    }
+
+
+/********Personal Profile********/
+
+    .personalProfileMainText {
+        height: 96%;
+    }
+
+    .personalProfileContainer {
+        height: 596px;
+    }
+
+    .personalInfoMainText h1 {
+        font-size: 63px;
+        line-height: 70px;
+    }
+
+    .personalInfoMainText h2 {
+        font-size: 40px;
+    }
+
+    .personalInfoMainText h3 {
+        font-size: 18px;
+    }
+
+    .personalQuoteText q {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .personalQuoteText p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .personalProfileSocialMedia {
+        height: 27px;
+    }
+
+    .profileMainTextContent {
+        height: 100%;
+    }
+
+    .personalProfileContainerSection2 {
+        height: 1370px;
+    }
+
+    .containerSection2Col2 h2 {
+        font-size: 38px;
+    }
+
+    .containerSection2Column1 p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .textContainetSection2Col1 {
+        max-width: 454px;
+    }
+
+    .containerSection2Column1 blockquote {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .firstPostTitleAndDesc {
+        width: 100%;
+        height: 222px;
+    }
+
+    .firstPostTitleAndDesc p {
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .contFirstPost {
+        height: 532px;
+    }
+
+    .newsVideosHeader h2 {
+        font-size: 47px;
+        line-height: 56px;
+    }
+
+    .newsVideosHeader p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .newsVideosPostcasts {
+        height: 1882px;
+    }
+
+    .newsProfilePost h4 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .newsProfileParr {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .newsVideoSliderContainer {
+     
+        height: 458px;
+    }
+
+    .newsVideoContent {
+        height: 518px;
+    }
+
+    .newsVideosNewsSection {
+        height: 560px;
+    }
+
+}/**/
+
+/* tablet */
+@media screen and (max-width: 768px) {
+
+body {
+    overflow-x: hidden;
+}
+
+.mobileMenuContainer {
+    width: 100%;
+    height: 178px;
+}
+
+#navbar{
+    display: none!important;
+}
+
+.contenedorMenu {
+    display: none;
+}
+
+.mobileMenuContainer {
+    display: flex;
+}
+
+
+
+#menuMobile {
+    display: flex;
+}
+
+.carrousel {
+    height: 100vh;
+}
+
+
+.gallery-thumbs {
+    display: none;
+}
+
+.contenedorCarr {
+    padding: 0;
+}
+
+.gallery-top {
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0!important;
+}
+
+.uno {
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/swiperImg1Mobile.jpg);
+    background-size: cover;
+}
+.dos {
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/swiperImg2Mobile.jpg);
+    background-size: cover;
+}
+.tres {
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../rsc/img/swiperImg3Mobile.jpg);
+    background-size: cover;
+}
+.cuatro {
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../rsc/img/swiperImg4Mobile.jpg);
+    background-size: cover;
+}
+
+.uno, .dos, .tres, .cuatro {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+}
+
+.swiper-slide {
+    padding: 0 50px 20px 75px;
+}
+
+.swiper-slide h2 {
+    font-size: 68px;
+    margin: 0px;
+    line-height: 88px;
+}
+
+.swiper-slide img {
+    margin-left: 0px;
+    width: 45%;
+    margin-top: 20px;
+}
+
+.swiper-container {
+
+      border-radius: 0px;
+
+}
+
+/***Innovate***/
+
+ .innovate{
+    display: none;
+}
+
+
+.innovateMobile {
+    display: block;
+    height: 961px;
+}
+
+.innovateMobileTitle h2 {
+    margin: 0;
+    font-size: 66px;
+}
+
+/****OUR BRANDS****/
+
+.separador {
+    display: none;
+}
+.ourBrands {
+    height: 2782px;
+    background: white;
+}
+
+.innovateMobileTitle, .ourBrandsTitle, .whoWeAreTitle, .buildingTitle {
+    width: 100%;
+    height: 180px;
+    padding-bottom: 53px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ourBrandsTitle h2, .whoWeAreTitle h2, .buildingTitle h2 {
+    font-size: 66px;
+    margin: 0;
+}
+
+.brandPicture {
+    width: 694px;
+    height: 365px;
+}
+
+.brandContentContainer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+}
+
+.ourBrandsContent {
+    height: 800px;
+    margin-top: 20px;
+}
+
+.ourBrandsTitle {
+    background: white;
+}
+
+.brandReverse {
+    flex-direction: column-reverse;
+}
+
+.socialLogoContainer {
+    display: none;
+}
+
+.contentPic {
+    width: 100%;
+    height: 365px;
+    display: flex;
+    justify-content: center;
+}
+
+.contentText {
+    width: 100%;
+    height: 56%;
+    text-align: center;
+}
+
+.brandsOverFlowMobile h3 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 35px;    
+}
+
+.brandsOverFlowMobile p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.brandsOverFlow {
+    display: none;
+}
+
+.brandsOverFlowMobile {
+    display: block;
+    width: 680px;
+    height: 75%;
+
+}
+
+.textContainer {
+    width: 100%;
+    height: 94%;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ourBrands {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.saparadorMobile {
+    display: block;
+    width: 80%;
+
+    margin-bottom: 36px;
+}
+
+
+/***WHO WE ARE***/
+
+.whoWeAre {
+    height: 934px;
+}
+
+.whoWeAreTitle, .buildingTitle {
+    margin-top: -20px;
+}
+
+.whoWeAreContainer {
+    height: 734px;
+}
+
+.whoWeAreVideo {
+    height: 432px;
+}
+
+.slideshow-container {
+    height: 100%;
+}
+
+.mySlides {
+    width: 660px;
+    height: auto;
+}
+
+.mySlides, .mySlideShade {
+    background: #ffffff;
+}
+
+.slideshow-container {
+    flex-direction: column;
+    width: 98%;
+}
+
+.meetTeam h2 {
+    font-size: 38px;
+}
+
+.meetMember {
+    width: 660px;
+
+    margin: 0px auto;
+}
+
+.meetMember p {
+    font-size: 23px;
+}
+
+.videoText {
+    width: 90%;
+}
+
+.dotContainer {
+
+    flex-direction: row;
+    height: 105px;
+    margin-top: 35px;
+}
+
+.dotContainerMobile {
+    display: none;/****display flex cuando tengamos contenido**/
+    justify-content: space-around;
+    width: 660px;
+    margin: auto;
+    margin-top: 35px;
+}
+
+.dotimg4 {
+    display: none;
+}
+.dotContainerDesk {
+    display: none;
+}
+
+.separaWho {
+    margin-top: 40px;
+}
+
+
+/***** Building With Alma *****/
+
+.linkMobileBiulding {
+    display: block;
+}
+.buildingVideo, .separadorBuilding, .bArticleText {
+    display: none;
+}
+
+.buildingContainer {
+    height: 1519px;
+    background: white;
+    margin-bottom: 40px;
+}
+
+.buildingArticles {
+    height: 1183px;
+}
+
+.buildingArticlesContainer {
+    flex-direction: column;
+    height: 100%;
+}
+
+.buildingArticleContent {
+    width: 100%;
+    height: 30%;
+}
+
+.bArticleimage h3 {
+    font-size: 51px;
+    line-height: 61px;
+}
+
+.bArticleimage {
+    height: 348px;
+    width: 660px;
+    margin: auto;
+}
+
+.visitOurBlogMobile {
+    display: block;
+}
+
+.visitOurBlogMobile a {
+    text-decoration: none;
+}
+
+
+.visitOurBlogMobile .buildingButtonContainer {
+    align-items: center;
+}
+
+.visitOurBlogMobile .ourBlogButton {
+    width: 577px;
+    height: 86px;
+}
+
+.ourBlogButton h2 {
+    font-size: 51px;
+}
+
+.buildingButtonContainer {
+    padding: 0;
+}
+
+
+/****Footer****/
+
+footer {
+    height: 850px;
+}
+
+.footerContainer {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerBoxes {
+    height: 50%;
+    width: 50%;
+    padding: 0;
+    
+}
+
+.footerMenuContainer {
+    height: 100%;
+}
+
+.footerMenuContainer h3, .footerMenuHeader h3 {
+    font-size: 33px;
+}
+
+
+.footerMenuContainer2 {
+    display: none;
+}
+
+.footerMenuHeader {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footerMenuList li {
+    padding-bottom: 10px;
+}
+
+.contactListBox, .footerMenuList {
+    text-align: center;
+}
+
+.footerMenuContainer2Mobile {
+    display: flex;
+    width: 100%;
+}
+
+.almaFooterBrand img {
+    width: 120px;
+    padding-bottom: 10px;
+}
+
+.allRights {
+    justify-content: center;
+}
+
+.socialContainer img {
+    width: 35px;
+    height: 35px;
+}
+.linkedIn img {
+    width: 40px;
+    height: 40px;
+}
+
+.instaGram img, .faceBook img {
+    width: 40px;
+    height: 40px;
+}
+
+.footerMenuContainer a, .footerMenuContainer li, .contactListBox h4, .contactListBox p {
+    font-size: 28px;
+}
+
+.contactListBox p {
+    font-family: 'Crimson Text', serif;
+    font-size: 22px;
+}
+
+.almaFooterBrand img {
+    width: 125px;
+}
+
+
+/**********WhoWeAre.html**********/
+    
+    .wwaSectionTitle h2 {
+        font-size: 56px;
+        line-height: 67px;
+    }
+
+    .wwaCarrousel {
+        padding-top: 178px;
+    }
+
+    .wwaCarrPicture h1 {
+        font-size: 67px;
+        line-height: 80px;
+        text-align: left;
+        width: 480px;
+    }
+
+     .wwaCarrPicture h3 {
+        font-size: 55px;
+        line-height: 66px;
+        text-align: left;
+        width: 480px;
+     }
+
+
+
+    .whoWeArePageContainer {
+        height: 100vh;
+    }
+
+    .wwaWhoWeAre {
+        display: none;
+    }
+
+    .wwaWhoWeAreMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 632px;
+    }
+
+
+
+    /** Carrousel WhoWeAre**/
+
+    .containerdos {
+        width: 100%;
+        height:500px;
+    }
+
+    .slider-container-Wwa {
+        height: 100%;
+        display: inline-flex;
+        overflow: hidden;
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+    }
+
+    .slideWwa {
+        max-height: 100%;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        user-select: none;
+    }
+
+    .slide img {
+        max-width: 100%;
+        max-height: 60%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .slide h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .content {
+        width: 672px;
+        height: 286px;
+    }
+
+    .slide h4 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        background-color: #444;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+    }
+
+    .grabbing {
+        cursor: grabbing;
+    }
+
+    .grabbing .slide img {
+        transform: scale(0.9);
+    }
+
+    .hrForMobile {
+        height: 5px;
+        width: 90%;
+        margin: auto;
+        background:#FF1D3A;
+        display: block;
+    }
+
+    .ac1 {
+        background: url('../rsc/img/mobile-who-we-are-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .ac2 {
+        background: url('../rsc/img/mobile-who-we-are-2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .ac3 {
+        background: url('../rsc/img/mobile-who-we-are-3.jpg');   
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .wwaSectionTitle {
+        height: 68px;
+    }
+
+    .auxContainerText p {
+        font-size: 20px;
+        line-height: 22px;
+        width: 673px;
+        text-align: center;
+    }
+
+
+    /*OurFounders*/
+
+    .ourFounders {
+        height: 1745px;
+        margin-bottom: 40px;
+    }
+
+    .wwaSectionContainer2 {
+        height: 1677px;
+    }
+
+    .ourFoundersBio {
+        height: 50%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .ourFoundersBio img {
+        width: 672px;
+    }
+
+    .ourFoundersBioText {
+        width: 672px;
+    }
+
+    .ourFoundersBioText h3 {
+        font-size: 55px;
+        line-height: 65px;
+        width: 672px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .ourFoundersBioText {
+        height: 435px;
+    }
+
+    .ourFoundersBioText p {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .wwaSectionContainer2 {
+        text-align: center;
+    }
+    
+    .bioRight {
+        font-size: 23px;
+        line-height: 27px;
+    }
+
+    /****/
+
+}/*******/
+
+
+/* tablet */
+@media screen and (max-width: 540px) {
+
+/**Menu**/
+.fa-times-circle {
+    font-size: 30px;
+}
+
+#menuMobile div {
+    left: 75px;
+}
+
+.mobileLogoContainer {
+    width: 144px;
+    height: 65px;
+ }
+
+ .fa-bars{
+    font-size: 41px;
+}
+
+/*Carrousel*/
+.swiper-slide h2 {
+    font-size: 45px;
+    margin: 0px;
+    line-height: 59px;
+    margin-bottom: 0;
+}
+
+/**Innovate**/
+
+.innovateMobile {
+    height: 886px;
+}
+
+.innovateMobileTitle {
+    align-items: center;
+}
+
+
+.innovateMobileTitle h2 {
+    margin: 0;
+    font-size: 43px;
+}
+
+.innovateMobileMain p {
+    padding: 0px 10px;
+}
+
+
+.innovateMobileContainer1 h3, .innovateMobileContainer2 h3 {
+    font-size: 29px;
+  
+}
+
+
+/**Out Brands**/
+
+.ourBrands {
+    height: 2674px;
+    background: white;
+}
+
+.ourBrandsTitle h2, .whoWeAreTitle h2, .buildingTitle h2 {
+    font-size: 51px;
+    margin: 0;
+}
+
+.ourBrandsContent {
+    width: 98%;
+}
+
+.brandsOverFlowMobile {
+    width: 100%;
+  
+}
+
+.contentText {
+    margin-top: -10px;
+}
+
+
+/***Who We Are***/
+
+.whoWeAre {
+    height: 850px;
+}
+
+.whoWeAreContainer {
+    height: 654px;
+}
+
+.whoWeAreVideo {
+    height: 348px;
+}
+
+.mySlides {
+    width: 100%;
+    height: auto;
+}
+
+.meetMember {
+    width: 100%;
+    margin: 0px auto;
+    height: 66%;
+}
+
+.meetMember p {
+    font-size: 18px;
+}
+
+.dotContainerMobile {
+    width: 74%;
+}
+
+.dotimg3 {
+    display: none;
+}
+
+
+/**Building**/
+
+.buildingContainer {
+    height: 1321px;
+}
+
+.innovateMobileTitle, .ourBrandsTitle, .whoWeAreTitle, .buildingTitle {
+  padding-bottom: 10px;
+  height: 120px;
+}
+
+.bArticleimage {
+    width: 98%;
+    height: 100%;
+}
+
+.bArticleimage h3 {
+    font-size: 41px;
+}
+
+.buildingArticles {
+    height: 1003px;
+}
+
+.buildingContainer {
+    height: 1361px;
+}
+
+.visitOurBlogMobile .ourBlogButton {
+    width: 458px;
+    height: 86px;
+}
+
+/**footer**/
+
+footer {
+    height: 924px;
+}
+
+.footerMenuContainer a, .footerMenuContainer li, .contactListBox h4, .contactListBox p {
+    font-size: 19px;
+}
+
+.footerBoxes {
+    height: 40%;
+    width: 50%;
+    padding: 0px;
+
+}
+
+}
+
+
+/* smart phone */
+@media screen and (max-width: 478px) {
+
+#menuMobile {
+    width: 62%;
+}
+
+#menuMobile div {
+    left: 81px;
+}
+
+#menuMobile a  {
+    font-size: 24px;
+}
+
+.mobileMenuContainer {
+    height: 105px;
+}
+
+.mobileLogoContainer {
+    width: 127px;
+    height: 57px;
+}
+
+.fa-bars, .fa-times-circle {
+    font-size: 30px;
+}
+
+.mobileBurgerContainer {
+    padding-top: 34px;
+}
+
+.swiper-slide {
+    padding: 0 22px 20px 24px;
+}
+
+.swiper-slide h2 {
+    font-size: 46px;
+    margin: 0px;
+    line-height: 55px;
+}
+
+.swiper-slide img {
+    margin-left: 0px;
+    width: 55%;
+    margin-top: 20px;
+}   
+
+
+/***Innovate**/
+
+.innovateMobile {
+    height: 723px;
+}
+
+.innovateMobileTitle, .ourBrandsTitle, .whoWeAreTitle, .buildingTitle {
+    height: 77px;
+    padding-bottom: 5px;
+}
+
+.innovateMobileTitle h2, .ourBrandsTitle h2, .whoWeAreTitle h2, .buildingTitle h2 {
+    font-size: 28px;
+}
+
+.innovateMobileFooter {
+    display: none;
+}
+
+.innovateMobileMain {
+    display: flex;
+    height: 214px;
+}
+
+.innovateMobileMainText h2 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.innovateMobileMainText p {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.innovateMobileMainText {
+    width: 280px;
+    height: 214px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*****OurBrands****/
+
+.ourBrands {
+    height: 1853px;
+}
+.ourBrandsContent  {
+    margin-top: 0px;
+    height: 489px;
+}
+
+.contentPic {
+    height: 230px;
+}
+
+.brandPicture  {
+    width: 434px;
+    height: 228px;
+}
+
+
+.contentText {
+    height: 320px;
+}
+
+.textContainer {
+    height: 100%;
+}
+
+
+.brandsOverFlowMobile {
+    width: 434px;
+}
+
+.brandsOverFlowMobile h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.brandsOverFlowMobile p {
+    font-size: 15px!important;
+    
+}
+
+.saparadorMobile {
+    margin:0;
+    margin-bottom: 20px;
+}
+
+
+/****Who We Are****/
+
+
+.whoWeAre {
+    height: 481px;
+    margin-top: -20px;
+}
+
+.whoWeAreContainer {
+    height: 385px;
+}
+
+.whoWeAreVideo {
+    height: 280px;
+}
+
+.slideshow-container {
+    padding: 0;
+}
+
+.mySlides  {
+    width: 434px;
+}
+
+.mySlideText {
+    height: 146px;
+}
+
+.meetTeam {
+    height: 31%;
+}
+
+.meetTeam h2 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.meetMember {
+    width: 100%;
+}
+
+.meetMember p {
+    font-size: 15px!important;  
+}
+
+.dot {
+    height: 100%;
+    width: 50%;
+}
+
+.dotContainer {
+    width: 73%;
+    height: 86px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.dotimg3 {
+    display: none;
+}
+
+.separaWho {
+    margin: auto;
+}
+
+/*****************************************************/
+/*****************************************************/
+
+/****Building****/
+
+.buildingContainer {
+    margin-top: 10px;
+}
+
+.buildingArticlesContainer {
+    padding: 0;
+}
+.bArticleimage {
+    width: 434px;
+    height: 226px;
+}
+
+.bArticleimage h3 {
+
+    font-size: 32px;
+    line-height: 30px;
+
+}
+
+.buildingContainer {
+    height: 936px;
+}
+
+.buildingArticles {
+    height: 750px;
+}
+
+.visitOurBlogMobile, .ourBlogButton {
+    width: 434px!important;
+    height: 56px!important;
+}
+
+.ourBlogButton h2 {
+    font-size: 29px;
+    line-height: 35px;
+}
+
+
+
+/****Footer****/
+
+footer {
+    height: 800px;
+}
+
+.footerMenuHeader h3 {
+    font-size: 25px;
+}
+
+.footerMenuContainer a {
+    font-size: 18px;
+}
+
+.contactListBox h4 {
+    font-size: 22px;
+}
+
+.footerMenuList li {
+    padding: 0px;
+}
+
+.contactListBox p {
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+#open p, #close p {
+    font-size: 18px; 
+    margin-top: 29px;
+}
+
+.footerBoxes {
+    height: 38%;
+}
+
+.almaFooterBrand img {
+    width: 82px;
+}
+
+.socialContainer img {
+    width: 30px;
+    height: 30px;
+}
+
+.allRights p {
+    font-size: 16px;
+}
+
+
+
+}
+
+
+/* smart phone */
+@media screen and (max-width: 414px) {
+
+
+/*** Menu ***/
+
+#menuMobile { 
+    right: -10px;
+}
+
+/***Innovate***/
+
+.innovateMobile {
+    height: 720px;
+}
+
+.innovateMobileMainText p {
+    margin-top: 8px;
+}
+
+/*****OurBrands****/
+
+.ourBrands {
+    height: 1614px;
+}
+.brandPicture  {
+    width: 343px;
+    height: 180px;
+}
+
+.brandsOverFlowMobile h3 {
+    margin-bottom: 13px;
+}
+
+.brandsOverFlowMobile {
+    width: 90%;
+}
+
+
+
+/****Who We Are****/
+
+.whoWeAre {
+    height: 431px;
+}
+
+.whoWeAreContainer {
+    height: 385px;
+}
+
+
+.whoWeAreVideo {
+    height: 219px;
+}
+
+.mySlides  {
+    width: 343px;
+}
+
+.mySlideText {
+    height: 156px;
+}
+
+.meetTeam {
+    height: 19%;
+}
+
+.meetMember {
+    height: auto;
+}
+.meetMember p {
+    font-size: 15px!important;
+    line-height: 24px;
+    
+}
+
+.videoText {
+    width: 343px;
+    margin: auto!important;
+}
+.dotContainer {
+    width: 343px;
+
+}
+
+.dot {
+    widows: 159px;
+    height: 90px;
+}
+
+/****Building****/
+
+.buildingTitle {
+    margin-top: 0;
+}
+
+.buildingContainer {
+    height: 824px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.buildingButtonContainer, .visitOurBlogMobile {
+    width: 100%!important;
+}
+
+.bArticleimage  {
+    width: 343px;
+    height: 180px;
+}
+
+.buildingArticles {
+
+    height: 625px;
+}
+
+.visitOurBlogMobile {
+    height: 72px;
+}
+
+.ourBlogButton {
+    width: 304px!important;
+    height: 45px!important;
+}
+
+
+/***Footer***/
+
+footer {
+    height: 615px;
+    padding: 10px;
+}
+
+.footercontainer {
+    width: 100%;
+}
+
+#open p, #close p {
+
+    margin-top: 25px;
+}
+
+.footerMenuHeader {
+    margin-bottom: 20px;
+}
+
+.contactListBox {
+    margin-top: 8px;
+}
+
+
+.footerMenuContainer ul {
+
+    margin: 0;
+}
+
+.footerBoxes {
+    height: 37%;
+    margin-bottom: 82px;
+}
+
+.almaFooterBrand, .socialMediaContainer {
+    margin-bottom: 5px;
+}
+
+
+}
+
+/* smart phone */
+@media screen and (max-width: 390px) {
+
+.innovateMobile {
+    height: 700px;
+}
+
+.innovateMobileTitle, .ourBrandsTitle, .whoWeAreTitle, .buildingTitle {
+    height: 77px;
+    padding-bottom: 5px;
+}
+
+
+/***WHO WE ARE***/
+
+.whoWeAre {
+    height: 431px;
+}
+
+.whoWeAreContainer {
+    height: 385px;
+}
+
+
+/***Our Brands**/
+
+.ourBrands {
+    height: 1618px;
+}
+
+}
+
+
+/* smart phone */
+@media screen and (max-width: 375px) {
+
+/**Innovate**/
+.innovateMobileMainText {
+    width: 241px;
+}
+
+/**Our Brands**/
+
+.ourBrandsContent {
+    width: 100%;
+}
+
+.brandsOverFlowMobile {
+    width: 88%;
+}
+
+/***Building**/
+
+.buildingContainer {
+    height: 783px;
+}
+
+
+/**Who We Are**/
+
+.whoWeAre {
+    height: 431px;
+}
+
+.whoWeAreContainer {
+    height: 385px;
+}
+
+/***Footer***/
+
+footer {
+    height: 720px;
+    padding: 5px;
+}
+
+}
+
+
+/* */
+@media screen and (max-width: 320px) {
+
+
+/**Menu**/
+.mobileLogoContainer {
+    width: 102px;
+    height: 45px;
+}
+
+
+/***Swiper***/
+
+.swiper-slide h2 {
+    font-size: 34px;
+    margin: 0px;
+    line-height: 48px;
+}
+
+/***OurBrands**/
+
+.ourBrands {
+    height: 1710px;
+}
+
+.ourBrandsContent {
+    width: 97%;
+    height: 450px;
+}
+
+.brandContentContainer {
+    height: 450px;
+}
+
+/**Who We Are**/
+
+.whoWeAre {
+    height: 408px;
+}
+
+.whoWeAreContainer {
+    height: 328px;
+}
+
+.whoWeAreTitle {
+    height: 68px;
+    padding: 0px;
+}
+
+.mySlides {
+    width: 100%;
+}
+
+.whoWeAreVideo {
+    height: 212px;
+}
+
+.videoText {
+    width: 90%;
+}
+
+.dotContainer {
+    width: 90%;
+}
+
+.meetMember p {
+    line-height: 21px;
+}
+
+
+/***Builing**/
+
+..buildingContainer {
+    margin-top: 20px;
+}
+.bArticleimage {
+    width: 90%;
+}
+
+.bArticleimage h3 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.visitOurBlogMobile, .ourBlogButton {
+    width: 288px!important;
+    height: 56px!important;
+}
+
+
+
+/***Footer***/
+
+.footerMenuHeader h3 {
+    font-size: 20px;
+}
+
+.contactListBox h4 {
+    font-size: 18px;
+}
+
+.footerMenuContainer a {
+    font-size: 16px;
+}
+
+.contactListBox p {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.socialContainer img {
+    width: 25px;
+    height: 25px;
+}
+
+}
+
+
+/* ANIMACIONES */
+
+
