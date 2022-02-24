@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--META-->
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--retrocompatible con microsoft edge-->
+        <meta name="author" content="Gustavo Jaén Vidal">
+        <meta name="copyright" content="Alma Ventures LLC">
+        <meta name="contact" content="gustavojaen@almaventures.com">
+        <meta name="description" content="Alma Ventures is a capital allocator that funds, develops, and operates enterprises and mission-based, community-driven initiatives in the real estate industry."> <!--descripcion de la pagina web-->
+        <meta name="keywords" content=""> <!--palabras clave por las que se indexan-->
+        <meta name="robots" content="Index, Follow"> <!--sustituye al robots.txt / el dia que se indexe cambia el content-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">  
+
+
+        <!-- ESTILOS -->
+
+        <link rel="stylesheet" href="vendor/swiper/css/swiper.min.css">
+      
+         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        
+        
+        <link rel="icon" tyoe="icon/png" href="assets/rsc/img/fav.png"> <!--va en la carpeta root. El favicon debe llamarse favicon.png. tiene que ser cuadrado. Mismo alto y ancho.-->
+
+         <!--FontAwesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+       
+
+
+        <title>Alma Ventures | Real Estate Capital Allocator</title>
+
+    </head>
+    <body>
+
+        <div class="container" id="container">
+
+
+<!--Menu Mobile-->
+
+<div class="mobileMenuContainer" id="mobileMenuContainer">
+  <div class="mobileLogoContainer" id="mobileLogoContainer">
+    <img id="imagenMobileLogo"src="assets/rsc/img/almaVenturesFooter.png" alt="">
+    
+  </div>
+  <div class="mobileBurgerContainer" id="mobileBurgerContainer">
+   <i onclick="desplegar()" class="fas fa-bars" id="burgerMobile"></i>
+  </div>
+</div>
+
+  
+<!-- Vertical por CSS ver archivo -->
+  <div id="menuMobile">
+    <div ><i onclick="cerrarMenu()" class="far fa-times-circle"></i></div>
+
+    <ul>
+      <li>
+        <a href="https://almablog.co/" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="#innovateMobile">How We Innovate</a>
+      </li>
+      <li>
+        <a href="#ourBrands">Our Brands</a>
+      </li>
+      <li>
+        <a href="#whoWeAre">Who We Are</a>
+      </li>
+      <li>
+        <a href="#buildingContainer">Building With Alma</a>
+      </li>
+
+    </ul>
+  </div>
+
+<!--Fin Menu Mobile-->
+
+<div id="navbar">
+  <div class="menu">
+            <div class="menuLogo">
+              <a href="www.almaventures.com"><img src="assets/rsc/img/logo.png" alt="logo Alma Ventures"></a>
+            </div>
+            <div class="menuLinks">
+              <a href="https://almablog.co/" target="_blank"><div class="blogLink activeNavBar">Blog</div></a>
+              <a href="#innovate"><div class="blogLink">How We Innovate</div></a>
+              <a href="#ourBrands"><div class="blogLink">Our Brands</div></a>             
+              
+              <a href="#whoWeAre"><div class="blogLink">Who We Are</div></a>
+              <a href="#buildingContainer"><div class="blogLink">Building With Alma</div></a>     
+            </div>              
+            <div class="buscador">
+              <input type="text" hidden>
+              <i class="fas fa-search"></i>
+              
+            </div>
+              
+          </div>
+</div>
+<!--Menu-->
+      <div class="contenedorMenu">
+          <div class="menu">
+            <div class="menuLogo">
+              <a href="#"><img src="assets/rsc/img/logo.png" alt="logo Alma Ventures"></a>
+            </div>
+            <div class="menuLinks">
+              <a href="https://almablog.co/" target="_blank" class="activeMenu">Blog</a>
+              <a href="#innovate">How We Innovate</a>
+              <a href="#ourBrands">Our Brands</a>             
+              
+              <a href="#whoWeAre">Who We Are</a>
+              <a href="#buildingContainer">Building With Alma</a>
+              
+            </div>              
+            <div class="buscador">
+              <input type="text" hidden>
+              <i class="fas fa-search"></i>
+              
+            </div>
+              
+          </div>    
+      </div><!--Menu-->
+
+
+<!--Carrousel-->
+            <div class="carrousel">
+                 <div class="contenedorCarr">                 
+                   <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide uno">
+                        <h2>REAL ESTATE ENTREPRENEURS, <br> DESIGN ORIENTED INNOVATORS, <br> COMMUNITY BUILDERS.  </h2>
+                        
+
+                      </div>
+                      <div class="swiper-slide dos">
+                        <h2>SERVING LANDLORDS AND HOMEOWNERS FAST AND FAIR OFFERS.</h2>
+                        <img src="assets/rsc/img/logoMarketplace.png" alt="Alma Marketplace Logo">
+                      </div>
+                      <div class="swiper-slide tres">
+                        <h2>GREAT LIVING MADE AFFORDABLE. </h2>
+                        <img src="assets/rsc/img/logoLiving.png" alt="Alma Marketplace Logo">
+                        
+                      </div>
+                       <div class="swiper-slide cuatro">
+                        <h2>THE REAL ESTATE LOOP: <br>LATEST NEWS, TIPS & STORIES.</h2>
+                        <a href="https://almablog.co/" target="_blank"><img src="assets/rsc/img/almaBlog.png" alt="Alma Blog Logo"></a>
+                      </div>
+                      
+                    </div>
+           
+                  </div>
+                  <div class="swiper-container gallery-thumbs" >
+                     <div class="swiper-button-next "></div>
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide dos"></div>
+                      <div class="swiper-slide tres"></div>
+                      <div class="swiper-slide cuatro"></div>
+                      <div class="swiper-slide uno"></div>
+                      
+                    </div>                                    
+                  </div>                    
+                </div>
+                
+            </div >
+
+
+<!--HOW We Innovate-->
+  <div class="innovate" id="innovate">
+    <div class="innovateTitle">
+      <h2>HOW WE INNOVATE</h2>      
+    </div>
+
+    <div class="innovateContent">
+      <div class="innovateContentContainer">  
+        <div class="interactiveLogo"> 
+            <div class="whiteCube topLeft">
+              <div class="cubeContent topLeftContent">
+
+              </div>
+            </div>
+            <div class="whiteCube topCenter">
+              <div class="cubeContent almaA">
+                
+              </div>
+            </div>
+            <div class="whiteCube topRight">
+              <div class="cubeContent topRightContent">
+  
+              </div>
+            </div>
+            <div class="whiteCube midLeft">
+              <div class="cubeContent almaL">
+                
+              </div>
+            </div>
+            <div class="whiteCube midCenter">
+              <div class="cubeContent midCenterUno">
+              
+                
+              </div>
+            </div>
+            <div class="whiteCube midRight">
+              <div class="cubeContent cubeLShape">
+                
+              </div>
+            </div>
+            <div class="whiteCube midLeft">
+              <div class="cubeContent cubeMShape">
+                
+              </div>
+            </div>
+            <div class="whiteCube midCenter">
+              <div class="cubeContent almaM">
+               
+                
+              </div>
+            </div>
+
+            <div class="whiteCube midRight">
+              <div class="cubeContent midRightDos">
+
+                
+              </div>
+            </div>
+            <div class="whiteCube bottomLeft">
+              <div class="cubeContent">
+
+              </div>
+            </div>
+            <div class="whiteCube bottomCenter">
+              <div class="cubeContent cubeAShape">
+
+                
+              </div>
+            </div>
+            <div class="whiteCube bottomRight">
+              <div class="cubeContent almaA">
+                
+              </div>
+            </div>
+        </div>
+        <div class="fondoLogo"></div>
+        <div class="innovateCards">
+            <div class="cardContainer">
+              <div class="flip-box-inner" onclick="flip(0)">
+                <div class="flip-box-front">
+                  <h3>ALMA VENTURES IS A<br> CAPITAL ALLOCATOR</h3>
+                </div>
+                <div class="flip-box-back"><h4>ALMA VENTURES IS A CAPITAL ALLOCATOR</h4>
+                  <p>that funds, manages, and <br> grows companies innovating in<br> the real estate space.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="flip-box-inner" onclick="flip(1)">
+                <div class="flip-box-front">
+                  <h3>WE BUILD AND SCALE COMPANIES</h3>
+                </div>
+                <div class="flip-box-back">
+                  <h4>WE BUILD AND SCALE COMPANIES</h4>
+                  <p>with tremendous upside, generating attractive risk-adjusted returns<br> and broader good in society.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="flip-box-inner" onclick="flip(2)">
+                <div class="flip-box-front">
+                  <h3>WITH A GLOBALLY-DISTRIBUTED MISSION-DRIVEN TEAM</h3>
+                </div>
+                <div class="flip-box-back">
+                  <h4>WITH A GLOBALLY-DISTRIBUTED MISSION-DRIVEN TEAM</h4>
+                  <p>challenging the status quo in one of the oldest and largest industries <br> in the world.</p>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+    </div> <!--Final Innovate Desktop-->   
+           
+  </div><!--Fin Innovate-->
+
+  <!--HOW We Innovate Mobile-->
+  <div class="innovateMobile" id="innovateMobile">
+    <div class="innovateMobileTitle">
+      <h2>HOW WE INNOVATE</h2>
+    </div>
+    <div class="innovateMobileMain mMainone fade">
+        <div class="innovateMobileMainText"> 
+          <h2>WE BUILD AND SCALE COMPANIES</h2> 
+          <p>with tremendous upside, generating attractive risk-adjusted returns and broader good in society.</p>
+        </div>
+        
+    </div>
+
+    <div class="innovateMobileMain mMaintwo fade">    
+        <div class="innovateMobileMainText"> 
+          <h2>ALMA VENTURES IS A CAPITAL ALLOCATOR</h2> 
+          <p>that funds, manages, and grows companies innovating in the real estate space.</p>
+        </div>
+        
+    </div>
+
+    <div class="innovateMobileMain mMainthree fade">
+        <div class="innovateMobileMainText"> 
+          <h2>WITH A GLOBAL MISSION-DRIVEN TEAM</h2> 
+          <p>challenging the status quo in one of the oldest and largest industries in the world.</p>
+        </div>
+        
+    </div>
+    <div class="innovateMobileFooter">
+      <div class="innovateMobileContainer1 fade" onclick="plusSlidesMobile(-1)">
+        <h3>WITH A GLOBALLY-DISTRIBUTED MISSION-DRIVEN TEAM</h3>
+      </div>
+      <div class="innovateMobileContainer1 fade" onclick="plusSlidesMobile(-1)">
+        
+        <h3>WE BUILD AND SCALE COMPANIES</h3>
+      </div>
+      <div class="innovateMobileContainer1 fade" onclick="plusSlidesMobile(-1)">
+        <h3>ALMA VENTURES IS A CAPITAL ALLOCATOR</h3>
+      </div>
+
+
+
+      <div class="innovateMobileContainer2 fade" onclick="plusSlidesMobile(1)">
+        <h3>ALMA VENTURES IS A CAPITAL ALLOCATOR</h3>
+      </div>
+      <div class="innovateMobileContainer2 fade" onclick="plusSlidesMobile(1)">
+        <h3>WITH A GLOBALLY-DISTRIBUTED MISSION-DRIVEN TEAM</h3>
+      </div>
+      <div class="innovateMobileContainer2 fade" onclick="plusSlidesMobile(1)">
+        <h3>WE BUILD AND SCALE COMPANIES</h3>
+      </div>
+    </div>
+
+    
+  </div>
+
+
+<!--Our Brands-->
+  <div class="ourBrands" id="ourBrands" >
+      <div class="ourBrandsTitle">
+        <h2>OUR BRANDS</h2>
+      </div>
+    <div class="ourBrandsContent contentColor">
+
+      <div class="brandContentContainer">
+        <div class="contentPic brandRight">
+          <div class="brandPicture brandPic1">
+            <img loading="lazy" src="assets/rsc/img/almaCompaniesPicture.png" alt="Alma Companies Logo">
+          </div>
+        </div>
+        <div class="contentText">
+          <div class="textContainer pLeft">
+            <div class="socialLogoContainer">
+              <div class="ourBrandsLogoContainer">
+                <img loading="lazy" src="assets/rsc/img/almaCompaniesLogo.png" alt="Alma Ventures Companies Logo">
+              </div>
+              
+              <div class="ourBrandsSocialMedia">
+            
+                
+                <div class="ourBrandsSocialMediaIcon">
+                  <a href="https://www.linkedin.com/company/alma-ventures-llc" target="_blank"><img loading="lazy" src="assets/rsc/img/venturesLinkedIn.png" alt=""></a>
+                </div>
+                                
+              </div>
+            </div>
+            
+              <div class="brandsOverFlow">
+               <h3>A VERTICALLY INTEGRATED REAL <br>
+                ESTATE DEVELOPMENT AND <br>
+                MANAGEMENT PLATFORM</h3>
+                <p>Alma Companies creates equity value along every stage of the deal cycle through multiple operating verticals: an acquisitions team specializing in off-market deal sourcing; a fully integrated construction company; a warehouse and operations logistics team, and a tech-first people and property management platform. </p>
+                <div class="otherText">
+                                   
+                </div>
+                
+              </div>
+
+              <div class="brandsOverFlowMobile">
+               <h3>A VERTICALLY INTEGRATED REAL 
+                ESTATE DEVELOPMENT AND 
+                MANAGEMENT PLATFORM</h3>
+                <p>Alma Companies creates equity value along every stage of the deal cycle through multiple operating verticals: an acquisitions team specializing in off-market deal sourcing; a fully integrated construction company; a warehouse and operations logistics team, and a tech-first people and property management platform. </p>                       
+              </div>
+                      
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="separador">
+    <span class="saparadorMobile"></span>
+
+    <div class="ourBrandsContent">
+      <div class="brandContentContainer brandReverse">
+        <div class="contentText">
+          <div class="textContainer">
+            <div class="socialLogoContainer">
+              
+              <div class="ourBrandsSocialMedia">
+                <div class="ourBrandsSocialMediaIcon">
+                  <a href="https://www.instagram.com/almahomemarketplace/" target="_blank"><img loading="lazy" src="assets/rsc/img/instaMarket.png" alt=""></a>
+                </div>
+                <div class="ourBrandsSocialMediaIcon">
+                  <a href="https://www.facebook.com/Alma-Home-Marketplace-110835991054673" target="_blank"><img loading="lazy" src="assets/rsc/img/fbMarket.png" alt=""></a>
+                </div>
+                              
+              </div>
+              <div class="ourBrandsLogoContainer">
+                <img loading="lazy" src="assets/rsc/img/almaHomeMaketplaceLogo.png" alt="Alma Home Marketplace Logo">
+              </div>
+
+            </div>
+          
+            <div class="brandsOverFlow">
+               <h3>SERVING HOMEOWNERS THE FASTEST AND HIGHEST SALE OR FINANCING OFFERS, AND MAKING LANDLORDING EASY.</h3>
+
+
+                <p>Alma Home Marketplace serves the multi-trillion-dollar market of landlords and homeowners wanting to quickly sell or avoid losing their home, through sale leaseback options, fractional equity sales, or guaranteed above-market rental income in exchange for a five-year purchase option. </p>
+                
+                <div class="otherText">
+                <P>Home Marketplace also offers cash advances to source and manage construction through Alma Companies to improve  rental income or sales price.</P>
+
+                </div>
+
+            </div>
+
+            <div class="brandsOverFlowMobile">
+               <h3>SERVING HOMEOWNERS THE FASTEST AND HIGHEST SALE OR FINANCING OFFERS, AND MAKING LANDLORDING EASY.</h3>
+
+                <p>Alma Home Marketplace serves the multi-trillion-dollar market of landlords and homeowners wanting to quickly sell or avoid losing their home, through sale leaseback options, fractional equity sales, or guaranteed above-market rental income in exchange for a five-year purchase option.</p>
+                <P>Home Marketplace also offers cash advances to source and manage construction through Alma Companies to improve  rental income or sales price.</P>
+            </div>
+
+          </div>
+        </div>
+        <div class="contentPic">
+          <div class="brandPicture brandPic2">
+            <img loading="lazy" src="assets/rsc/img/logoMarketplace.png" alt="Alma Marketplace Logo">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="separador">
+    <span class="saparadorMobile"></span>
+
+    <div class="ourBrandsContent contentColor">
+      <div class="brandContentContainer">
+        <div class="contentPic brandRight">
+          <div class="brandPicture brandPic3">
+            <img loading="lazy" src="assets/rsc/img/logoLiving.png" alt="Alma Living Logo">
+          </div>  
+        </div>
+        <div class="contentText">
+          <div class="textContainer pLeft">
+            <div class="socialLogoContainer">
+              <div class="ourBrandsLogoContainer">
+               <a href="https://www.almaliving.com/" target="_blank"><img loading="lazy" src="assets/rsc/img/almaLivingFooter.png" alt="Alma Living Logo"></a> 
+              </div>
+              
+              <div class="ourBrandsSocialMedia">
+                <div class="ourBrandsSocialMediaIcon">
+                  <a href="https://www.instagram.com/almaliving2/" target="_blank"><img loading="lazy" src="assets/rsc/img/instaLiving.png" alt=""></a>
+                </div>
+                <div class="ourBrandsSocialMediaIcon">
+                  <a href="https://www.facebook.com/almaliving2" target="_blank"><img loading="lazy" src="assets/rsc/img/fbLiving.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="brandsOverFlow">
+               <h3>GREAT LIVING MADE AFFORDABLE: ALL-INCLUSIVE UTILITIES AND RESTORED SPACES BRING COMMUNITY BACK TO LIFE.</h3>
+
+                <p>Alma Living is a technology platform focusing on tenant and property management. Alma Living is a design-forward brand, built to surprise and delight clients at every touch point. We make great living affordable in all types of communities and neighborhoods, and we offer convenient amenities and services. </p>
+
+            </div>
+
+            <div class="brandsOverFlowMobile">
+               <h3>GREAT LIVING MADE AFFORDABLE: ALL-INCLUSIVE UTILITIES AND RESTORED SPACES BRING COMMUNITY BACK TO LIFE</h3>
+
+                <p>Alma Living is a technology platform focusing on tenant and property management. Alma  Living is a design-forward brand, built to surprise and delight clients at every touch point. We make great living affordable in all types of communities and neighborhoods, and we offer convenient amenities and services. </p>  
+            </div>
+
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <span class="saparadorMobile"></span>
+  </div><!--Fin Our Brands-->
+
+
+<!--Who We Are-->
+             <div class="whoWeAre" id="whoWeAre">
+                <div class="whoWeAreTitle">
+                  <h2>WHO WE ARE</h2>
+                </div>
+                <div class="whoWeAreContainer">
+
+                  <div class="whoWeAreVideo">
+                    <div class="slideshow-container">
+                      
+                    <!--  <div class="mySlides fade"> 
+
+                        <div class='embed-container'><iframe class="lazyload" src="https://player.vimeo.com/video/512986973?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>                       
+                      </div>-->
+
+                      <div class="mySlides fade"> 
+
+                        <div class='embed-container'><iframe src="https://player.vimeo.com/video/513000081?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>></div>
+
+                                              
+                      </div>
+
+                     <!-- <div class="mySlides fade"> 
+
+                        
+                        <div class='embed-container'><iframe src="https://player.vimeo.com/video/512986973?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>                       
+                      </div>-->
+
+                     <!-- <div class="mySlides fade"> 
+
+                        <div class='embed-container'><iframe src="https://player.vimeo.com/video/513000081?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>></div>                       
+                      </div>-->
+
+
+                     <!-- <div style="text-align:center" class="dotContainer dotContainerDesk">
+                        <span class="dot dotimg1" onclick="currentSlide(1)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+                        <span class="dot dotimg2" onclick="currentSlide(2)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+                        <span class="dot dotimg3" onclick="currentSlide(3)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+                        <span class="dot dotimg4" onclick="currentSlide(4)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+
+                      </div>-->
+
+                    </div>
+
+                  </div>
+
+                  <div class="mySlideText">
+                    <div class="meetContainer">
+                      <div class="meetTeam">
+                        <h2>MEET THE ALMA VENTURES TEAM</h2>
+                      </div>
+                      <div class="meetMember">
+                       <!-- <p class="videoText">Brian Grimes discusses Alma Companies development activities and how Alma Home Marketplace serves homeowners and landlords.</p>-->
+                        <p class="videoText">Mark Hunter, Alma’s first outside investor, talks about what makes Alma Ventures special. </p>
+                       <!-- <p class="videoText">Brian Grimes discusses Alma Companies development activities and how Alma Home Marketplace serves homeowners and landlords.</p>-->
+                       <!-- <p class="videoText">Mark Hunter, Alma’s first outside investor, talks about what makes Alma Ventures special. </p>-->
+                      </div>
+                    </div>
+   
+
+                  </div>
+
+                  <div style="text-align:center" class="dotContainer dotContainerMobile">
+                        <span class="dot dotimg1" onclick="currentSlide(1)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+                        <span class="dot dotimg2" onclick="currentSlide(2)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+                        <span class="dot dotimg3" onclick="currentSlide(3)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+                        <span class="dot dotimg4" onclick="currentSlide(4)">
+                          <i class="fas fa-play-circle"></i>
+                        </span> 
+
+                      </div>
+
+                       
+                </div>
+               
+             </div>
+
+              <span class="saparadorMobile separaWho"></span>
+
+<!--Fin Who We Are-->
+
+
+<!--Building With Alma-->
+
+            <div class="buildingContainer" id="buildingContainer">
+              <div class="buildingTitle">
+                <h2>BUILDING WITH ALMA</h2>
+                
+              </div>
+
+              <div class="buildingArticles">
+                <div class="buildingArticlesContainer">
+                  <div class="buildingArticleContent">
+                    <div class="bArticleimage buildingUno">
+                      <h3>INDUSTRY NEWS</h3>
+
+                    </div> 
+                    <div class="bArticleText">
+                      <div class="bArticleTextParrag">
+                        <p>It's a simple concept. Build with soul. Build a business that cares about people; build a business in a space that isn't crowded.</p>
+                      </div>
+                      
+                      <a href="https://www.almablog.co/category/industry-news/"><h4>Read more.</h4></a>
+                      <hr style="margin-bottom: 25px; ">
+                      <div class="buildingBlogLinks">
+                        <a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                      </div>
+                      
+                    </div>      
+                    
+                    
+                  </div>
+                  <div class="buildingArticleContent">
+                    <div class="bArticleimage buildingDos">
+                      <h3>DESIGN & <br>ARCHITECTURE</h3>
+                    </div>
+                    
+                    <div class="bArticleText">
+                      <div class="bArticleTextParrag">
+                        <p>Bring new life to familiar ground. Open up spatial possibilities that are practical, comfortable, and design forward.</p>                      
+                      </div>
+                      
+                    <a href="https://www.almablog.co/category/design/"><h4>Read more.</h4></a>
+                      <hr style="margin-bottom: 25px;">
+                      <div class="buildingBlogLinks">
+                        <a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                     
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="buildingArticleContent">
+                    <div class="bArticleimage buildingTres">
+                      <h3>OUR COMMUNITY SERVICE</h3>
+                    </div>
+                    
+                    <div class="bArticleText">
+                      <div class="bArticleTextParrag">
+                        <p>Once our house is set, Alma builds soul back into the communities overlooked by everyone else.</p>
+                        
+                      </div>
+                      
+                      <a href=""><h4>Coming soon.</h4></a>
+                      <hr style="margin-bottom: 25px;">
+                      <div class="buildingBlogLinks">
+                        <a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+
+
+                
+              </div>
+
+              <div class="visitOurBlogMobile">
+                <a href="https://almablog.co/" target="_blank"><div class="buildingButtonContainer" >
+                  <div class="ourBlogButton">
+                    <h2>VISIT OUR BLOG</h2>
+                  </div>
+                </div></a>
+            
+              </div>
+
+              <hr class="separadorBuilding">
+
+              <div class="buildingVideo">
+                <div class="buildingVideoSlider">
+                  <div class="buildingVideoDisplay">
+
+                    <!--Slides Building-->
+                    <div class="mySlidesBuilding">
+                      <img loading="lazy" src="assets/rsc/img/almaBlogSliderImg.jpg">
+                    </div>
+
+                    <div class="mySlidesBuilding">
+                      <img loading="lazy" src="assets/rsc/img/agentLess.jpg">
+                    </div>
+
+                    <div class="mySlidesBuilding">
+                      <img loading="lazy" src="assets/rsc/img/cristal.jpg" alt="" onclick="hide()" id="coverMySlide">
+                      <iframe src="https://player.vimeo.com/video/513035005?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="iframeristal"allowfullscreen></iframe>
+                    </div>
+                      
+                    <div class="mySlidesBuilding">
+                      <img loading="lazy" src="assets/rsc/img/remoteWork.jpg">
+                    </div>
+
+                  </div>
+
+
+                  <div class="buildingVideoCarrousel">
+                    <div class="buildingVideoPreview">
+                      <img loading="lazy" class="demoBuilding cursor" src="assets/rsc/img/almaBlogSliderImg.jpg" style="width:100%" onclick="currentSlideBuilding(1)" alt="The Woods">
+                    </div>
+                    <div class="buildingVideoPreview">
+                      <img loading="lazy" class="demoBuilding cursor" src="assets/rsc/img/agentLess.jpg" style="width:100%" onclick="currentSlideBuilding(2)" alt="Cinque Terre">
+                    </div>
+                    <div class="buildingVideoPreview">
+                      <img loading="lazy" class="demoBuilding cursor" src="assets/rsc/img/cristal.jpg" style="width:100%" onclick="currentSlideBuilding(3)" alt="Mountains and fjords">
+                    </div>
+                    <div class="buildingVideoPreview">
+                      <img loading="lazy" class="demoBuilding cursor" src="assets/rsc/img/remoteWork.jpg" style="width:100%" onclick="currentSlideBuilding(4)" alt="Northern Lights">
+                    </div>
+                  
+                  </div>
+                        
+                </div>
+
+                <div class="buildingVideoText">
+                  <div class="BuildingVideoInfo">
+                    <div class="contenidoInfoBuilding">
+                      <h3>HAVE YOU MET ALMA? A LETTER FROM PHILADELPHIA</h3>
+                      <h4>Industry News</h4>
+                    
+                      <p>This is it. Our first trip together into the loop of great living and home marketplace latest trends. Welcome to the Alma Blog! </p>
+
+                      <hr>
+                      <div class="buildingBlogLinks"><a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                      </div>
+                      
+                    </div>
+
+                    <div class="contenidoInfoBuilding">
+                      <h3>AGENTLESS SHOWINGS: THE FUTURE OF REAL ESTATE</h3>
+                      <h4>Industry News</h4>
+
+                      <p>Make yourself at home! Alma Living is showing properties in Philadelphia without any agents whatsoever. Just you and the peaceful silence of an empty house.</p>
+
+                      <hr>
+                      <div><a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                      </div>
+                      
+                    </div>
+
+                    <div class="contenidoInfoBuilding">
+                      <h3>PERFECT TRANSITION <br>FOR ME</h3>
+                      <h4>Philanthropy & Community Group</h4>
+
+                      <p>One of our tenants, Crystal, talks about what makes Alma Living special, and how it’s changed her life.</p>
+
+                      <hr>
+                      <div><a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                      </div>
+                      
+                    </div>
+
+                    <div class="contenidoInfoBuilding">
+                      <h3>LOCKDOWN BROUGHT US TOGETHER</h3>
+                      <h4>Industry News</h4>
+
+                      <p>When the outside shut down, the doors to Bogotá, Buenos Aires, Florida, New York and Mexico City opened. Alma Ventures went global.</p>
+
+                      <hr>
+                      <div><a href="#">#Architecture</a><a href="#">#Housing</a><a href="#">#DesignIndustry</a><a href="#">#Philadelphia</a> <a href="#">#AlmaDesignTeam </a><a href="#"> #AlmaHomeMarketplace</a>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                  <div class="visitOurBlog">
+                    <div class="buildingButtonContainer">
+                      <a href="https://almablog.co/" target="_blank"><div class="ourBlogButton">
+                        <h2>VISIT OUR BLOG</h2>
+                      </div></a>
+                    </div>
+                
+                  </div>
+                  
+                </div>
+  
+              </div>
+             
+            </div><!--Fin Building With Alma-->
+
+
+
+<!--FOOTER-->
+  
+  <footer>
+    <div class="footerContainer">
+      <div class="footerBoxes">
+        <div class="footerMenuContainer">
+          <div class="footerMenuHeader">
+            <h3>MENU</h3>
+          </div>
+          <div class="footerMenuList">
+            <ul>
+             <li><a href="https://almablog.co/" target="_blank">Blog</a></li>
+             <li><a href="#innovate">How We Innovate</a></li>
+             <li><a href="#ourBrands">Our Brands</a></li>
+             <li><a href="#whoWeAre">Who We Are</a></li>
+             <li><a href="#buildingContainer">Building With Alma</a></li>
+             
+            </ul>
+          </div>
+        
+        </div> 
+
+        <div class="footerMenuContainer2">
+         <!-- <div class="footerMenuHeader">
+            <h3>SUBSCRIBE</h3>
+          </div>
+          <div class="footerMenuForm">
+            <form action="" method="POST" >
+              <input type="email" placeholder="Enter your e-mail" id="emailSubscribe"><button><i class="far fa-paper-plane"></i></button>
+            </form>
+          </div>-->
+          
+        </div>    
+
+      </div>
+      <div class="footerBoxes">
+        <div class="footerMenuContainer">
+          <div class="footerMenuHeader">
+            <h3>CONTACT US</h3>
+          </div>
+          <div class="footerMenuList contactList">
+            <div class="contactListBox">
+              <h4>PHONE</h4>
+              <p>215-660-0250</p>
+            </div>
+            <div class="contactListBox">
+              <h4>EMAIL:</h4>
+              <p>info@almaventures.com</p>
+            </div>
+            <div class="contactListBox">
+              <h4>Working Hours</h4>
+              <p>Mon - Fri / 9:00am to 6:00pm</p>
+            </div>
+            <div id="open"><p>Open Now</p></div>
+            <div id="close"><p>Closed</p></div>
+          </div>
+           
+        </div> 
+
+        <div class="footerMenuContainer2">
+          <div class="allRights">
+            <p><em>ALMA Company. All rights reserved 2020</em></p>
+          </div>
+          
+        </div>  
+      </div>
+      <div class="footerBoxes">
+        <div class="footerMenuContainer">
+          <div class="footerMenuHeader">
+            <h3>FOLLOW US</h3>
+          </div>
+          <div class="footerMenuList footerSocialList">
+            <div class="footerBrands">
+              <div class="almaFooterBrand"><img loading="lazy" src="assets/rsc/img/almaVenturesFooter.png" alt="Alma Ventures Logo"></div>
+              <div class="almaFooterBrand"><img loading="lazy" src="assets/rsc/img/almaMarketPlaceFooter.png" alt="Alma Marketplace Logo" ></div>
+              <div class="almaFooterBrand"><a href="https://www.almaliving.com/" target="_blank"><img loading="lazy" src="assets/rsc/img/almaLivingFooter.png" alt="Alma Living Logo"></a></div>
+              
+            </div>
+            <div class="socialMediaContainer">
+              <div class="socialMedia">
+                <div class="socialContainer "></div>
+                <div class="socialContainer "></div>
+                <div class="socialContainer "></div>
+                <div class="socialContainer linkedIn"><a href="https://www.linkedin.com/company/alma-ventures-llc" target="_blank"><img loading="lazy" src="assets/rsc/img/linkedIn.png" alt=""></a></div>
+              </div>
+              <div class="socialMedia">
+                <div class="socialContainer "></div>
+                <div class="socialContainer "></div>
+                <div class="socialContainer instaGram"><a href="https://www.instagram.com/almahomemarketplace/" target="_blank"> <img loading="lazy" src="assets/rsc/img/instaMarket.png" alt=""></a></div>
+                <div class="socialContainer faceBook"><a href="https://www.facebook.com/Alma-Home-Marketplace-110835991054673" target="_blank"><img loading="lazy" src="assets/rsc/img/fbMarket.png" alt=""></a></div>
+              </div>
+              <div class="socialMedia">
+                <div class="socialContainer"></div>
+                <div class="socialContainer"></div>
+                <div class="socialContainer instaGram"><a href="https://www.instagram.com/almaliving2/" target="_blank"><img loading="lazy" src="assets/rsc/img/instaLiving.png" alt=""></a></div>
+                <div class="socialContainer faceBook"><a href="https://www.facebook.com/almaliving2" target="_blank"> <img loading="lazy" src="assets/rsc/img/fbLiving.png" alt=""></a></div>
+              </div>
+            </div>
+            
+
+          </div>
+          <div class="footerMenuContainer2Mobile">
+            <div class="allRights">
+              <p><em>ALMA Company. All rights reserved 2020</em></p>
+            </div>
+            
+          </div> 
+
+           
+        </div>  
+
+        <div class="footerMenuContainer2">
+          <div class="allRights">
+            
+          </div>
+          
+        </div> 
+      </div>     
+    </div>
+
+
+     
+  </footer>
+
+
+
+</div>
+ <!--Scripts-->
+        <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="vendor/jquery/jquery-3.5.1.min.js"></script> <!--ASI SE IMPLMENTA JQUERY -->
+
+        <noscript>Debe habilitar JavaScript</noscript>
+        <script src="https://kit.fontawesome.com/b3275f9798.js" crossorigin="anonymous"></script>
+
+        <!-- Swiper JS -->
+        <script type="text/javascript" src="vendor/swiper/js/swiper.min.js"></script>
+
+        <script type="text/javascript">
+    
+
+
+  </script>
+    </body>
+</html>
